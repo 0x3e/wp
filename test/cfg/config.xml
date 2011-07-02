@@ -1,0 +1,7 @@
+<phpunit bootstrap="../init.php">
+  <testsuites>
+    <testsuite name="Testing is magic">
+      <file>test/test_dependencies.php</file>
+    </testsuite>
+  </testsuites>
+</phpunit>
