@@ -1,0 +1,280 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+FirePHP	app/vnd/FirePHP.php	/^class FirePHP {$/;"	c
+Inflector	app/vnd/Akinfector.php	/^class Inflector$/;"	c
+Label	app/vnd/FirePHP.php	/^          $Label = func_get_arg(1);$/;"	v
+Label	app/vnd/FirePHP.php	/^      $Label = func_get_arg(1);$/;"	v
+Label	app/vnd/FirePHP.php	/^    $Label = null;$/;"	v
+Label	app/vnd/FirePHP.php	/^  public function error($Object, $Label=null) {$/;"	v
+Label	app/vnd/FirePHP.php	/^  public function info($Object, $Label=null) {$/;"	v
+Label	app/vnd/FirePHP.php	/^  public function log($Object, $Label=null) {$/;"	v
+Label	app/vnd/FirePHP.php	/^  public function warn($Object, $Label=null) {$/;"	v
+Object	app/vnd/FirePHP.php	/^          $Object = array('Class'=>isset($trace[$i]['class'])?$trace[$i]['class']:'',$/;"	v
+Object	app/vnd/FirePHP.php	/^        $Object = $this->encodeTable($Object);$/;"	v
+Object	app/vnd/FirePHP.php	/^        $Object = array('Class'=>get_class($Object),$/;"	v
+Object	app/vnd/FirePHP.php	/^      $Object = $this->encodeObject($Object);$/;"	v
+ObjectDepth	app/vnd/FirePHP.php	/^  protected function encodeObject($Object, $ObjectDepth = 1, $ArrayDepth = 1)$/;"	v
+Options	app/vnd/FirePHP.php	/^      $Options = func_get_arg(3);$/;"	v
+Options	app/vnd/FirePHP.php	/^    $Options = array();$/;"	v
+Options	app/vnd/FirePHP.php	/^  public function group($Name, $Options=null) {$/;"	v
+Singleton	app/lib/singleton.php	/^Abstract class Singleton$/;"	c
+Test_dependencies	test/test_dependencies.php	/^class Test_dependencies extends PHPUnit_Framework_TestCase$/;"	c
+Test_install	test/test_install.php	/^class Test_install extends PHPUnit_Framework_TestCase$/;"	c
+Type	app/vnd/FirePHP.php	/^          $Type = func_get_arg(1);$/;"	v
+Type	app/vnd/FirePHP.php	/^        $Type = self::LOG;$/;"	v
+Type	app/vnd/FirePHP.php	/^      $Type = func_get_arg(2);$/;"	v
+Type	app/vnd/FirePHP.php	/^      $Type = self::EXCEPTION;$/;"	v
+Type	app/vnd/FirePHP.php	/^    $Type = null;$/;"	v
+__clone	app/lib/singleton.php	/^  public function __clone()$/;"	f
+__construct	app/con/install.php	/^  function __construct()$/;"	f
+__construct	app/lib/config.php	/^  private function __construct()$/;"	f
+__construct	app/lib/dev.php	/^  private function __construct(){$/;"	f
+__construct	app/lib/request.php	/^  public function __construct($url=null)$/;"	f
+__construct	app/lib/singleton.php	/^  private function __construct() $/;"	f
+__construct	app/vnd/FirePHP.php	/^  function __construct() {$/;"	f
+__construct	build/init.php	/^  function __construct()$/;"	f
+__construct	wp-install.php	/^  function __construct()$/;"	f
+__sleep	app/vnd/FirePHP.php	/^  public function __sleep() {$/;"	f
+_escapeTrace	app/vnd/FirePHP.php	/^  protected function _escapeTrace($Trace) {$/;"	f
+_escapeTraceFile	app/vnd/FirePHP.php	/^  protected function _escapeTraceFile($File) {$/;"	f
+_plural	app/vnd/Akinfector.php	/^        foreach ($irregular as $_plural=> $_singular){$/;"	v
+_singular	app/vnd/Akinfector.php	/^        foreach ($irregular as $_singular => $_plural){$/;"	v
+_standardizePath	app/vnd/FirePHP.php	/^  protected function _standardizePath($Path) {$/;"	f
+ascii	app/vnd/FirePHP.php	/^              $ascii = '';$/;"	v
+assertionHandler	app/vnd/FirePHP.php	/^  public function assertionHandler($file, $line, $code)$/;"	f
+b	app/vnd/FirePHP.php	/^                $b=ord($str[$i]);$/;"	v
+bits	app/vnd/FirePHP.php	/^            elseif($c >= 192) $bits=2;$/;"	v
+bits	app/vnd/FirePHP.php	/^            elseif($c >= 224) $bits=3;$/;"	v
+bits	app/vnd/FirePHP.php	/^            elseif($c >= 240) $bits=4;$/;"	v
+bits	app/vnd/FirePHP.php	/^            elseif($c >= 248) $bits=5;$/;"	v
+bits	app/vnd/FirePHP.php	/^            elseif($c >= 252) $bits=6;$/;"	v
+bits	app/vnd/FirePHP.php	/^    $bits=0;$/;"	v
+c	app/lib/singleton.php	/^      $c = __CLASS__;$/;"	v
+c	app/vnd/FirePHP.php	/^        $c=ord($str[$i]);$/;"	v
+c	app/vnd/FirePHP.php	/^    $c=0; $b=0;$/;"	v
+camelize	app/vnd/Akinfector.php	/^    function camelize($word)$/;"	f
+cfg	app/lib/config.php	/^    $this->cfg = \\sfYaml::load($paths_file);$/;"	v
+cfg	app/lib/config.php	/^  public $cfg;$/;"	v
+char	app/vnd/FirePHP.php	/^                          $char = pack('C*', $ord_var_c, ord($var{$c + 1}));$/;"	v
+char	app/vnd/FirePHP.php	/^                          $char = pack('C*', $ord_var_c,$/;"	v
+check_archive	app/con/install.php	/^  private function check_archive()$/;"	f
+check_for_update	app/con/install.php	/^  private function check_for_update()$/;"	f
+class	app/vnd/FirePHP.php	/^        $return['__className'] = $class = get_class($Object);$/;"	v
+class_lower	app/vnd/FirePHP.php	/^        $class_lower = strtolower($class);$/;"	v
+classify	app/vnd/Akinfector.php	/^    function classify($table_name)$/;"	f
+conditionalPlural	app/vnd/Akinfector.php	/^    function conditionalPlural($numer_of_records, $word)$/;"	f
+conf	app/con/install.php	/^    $conf=\\App\\Lib\\Config::get();$/;"	v
+convertAssertionErrorsToExceptions	app/vnd/FirePHP.php	/^    $this->convertAssertionErrorsToExceptions = $convertAssertionErrorsToExceptions;$/;"	v
+convertAssertionErrorsToExceptions	app/vnd/FirePHP.php	/^  protected $convertAssertionErrorsToExceptions = true;$/;"	v
+converts	app/vnd/Akinfector.php	/^    * The titleize function converts text like "WelcomePage",$/;"	f
+curl	app/lib/request.php	/^    $curl = curl_init();$/;"	v
+demodulize	app/vnd/Akinfector.php	/^    function demodulize($module_name)$/;"	f
+dep	test/test_dependencies.php	/^    $dep=new Dependencies();$/;"	v
+detectClientExtension	app/vnd/FirePHP.php	/^  public function detectClientExtension() {$/;"	f
+dev_dump	app/lib/dev.php	/^  private function dev_dump($group,$message){$/;"	f
+dev_log	app/lib/dev.php	/^  private function dev_log($group,$message){$/;"	f
+download_wp	app/con/install.php	/^  private function download_wp()$/;"	f
+dump	app/lib/dev.php	/^  public static function dump($group,$key,$message){$/;"	f
+dump	app/vnd/FirePHP.php	/^  public function dump($Key, $Variable) {$/;"	f
+elements	app/vnd/FirePHP.php	/^              $elements = array_map(array($this, 'json_encode'), $var);$/;"	v
+enabled	app/vnd/FirePHP.php	/^    $this->enabled = $Enabled;$/;"	v
+enabled	app/vnd/FirePHP.php	/^  protected $enabled = true;$/;"	v
+encodeObject	app/vnd/FirePHP.php	/^  protected function encodeObject($Object, $ObjectDepth = 1, $ArrayDepth = 1)$/;"	f
+encodeTable	app/vnd/FirePHP.php	/^  protected function encodeTable($Table) {$/;"	f
+encoded_value	app/vnd/FirePHP.php	/^      $encoded_value = $this->json_encode($value);$/;"	v
+error	app/vnd/FirePHP.php	/^  public function error($Object, $Label=null) {$/;"	f
+errorHandler	app/vnd/FirePHP.php	/^  public function errorHandler($errno, $errstr, $errfile, $errline, $errcontext)$/;"	f
+exception	app/vnd/FirePHP.php	/^      $exception = new ErrorException($errstr, 0, $errno, $errfile, $errline);$/;"	v
+exception	app/vnd/FirePHP.php	/^      $exception = new ErrorException('Assertion Failed - Code[ '.$code.' ]', 0, null, $file, $line);$/;"	v
+exceptionHandler	app/vnd/FirePHP.php	/^  function exceptionHandler($Exception) {$/;"	f
+fb	app/vnd/FirePHP.php	/^  public function fb($Object) {$/;"	f
+file	app/con/install.php	/^    $file=new \\Archive_Tar('app\/up\/latest.tar.gz','gz');$/;"	v
+file	app/lib/config.php	/^    $file = 'app\/cfg\/config.yml';$/;"	v
+file	app/vnd/FirePHP.php	/^      $file = preg_replace('\/\\\\\\\\+\/','\\\\',$File);$/;"	v
+file_handle	app/lib/dev.php	/^			  $file_handle = fopen(DEVLOG, 'a');$/;"	v
+firephp	app/lib/dev.php	/^		  $firephp=FirePHP::getInstance(true)$/;"	v
+for	app/vnd/FirePHP.php	/^  * array-walking function for use in generating JSON-formatted name-value pairs$/;"	f
+foreignKey	app/vnd/Akinfector.php	/^    function foreignKey($class_name, $separate_class_name_and_id_with_underscore = true)$/;"	f
+fr	app/con/install.php	/^    $fr = fopen("http:\/\/wordpress.org\/latest.tar.gz", "rb");$/;"	v
+fw	app/con/install.php	/^    $fw = fopen("app\/up\/latest.tar.gz", "wb");$/;"	v
+get	app/lib/singleton.php	/^  public static function get() $/;"	f
+getEnabled	app/vnd/FirePHP.php	/^  public function getEnabled() {$/;"	f
+getInstance	app/vnd/FirePHP.php	/^  public static function getInstance($AutoCreate=false) {$/;"	f
+getOptions	app/vnd/FirePHP.php	/^  public function getOptions() {$/;"	f
+getUserAgent	app/vnd/FirePHP.php	/^  protected function getUserAgent() {$/;"	f
+get_filetime	app/lib/request.php	/^  public function get_filetime() $/;"	f
+get_head	app/lib/request.php	/^  public function get_head() $/;"	f
+get_instance	app/lib/dev.php	/^	private function get_instance(){$/;"	f
+go	app/con/install.php	/^  function go()$/;"	f
+go	app/init.php	/^  public static function go()$/;"	f
+go	app/lib/init.php	/^  public static function go()$/;"	f
+go	build/init.php	/^  public static function go()$/;"	f
+go	test/init.php	/^  public static function go()$/;"	f
+go	wp-install.php	/^  function go()$/;"	f
+group	app/vnd/FirePHP.php	/^  public function group($Name, $Options=null) {$/;"	f
+groupEnd	app/vnd/FirePHP.php	/^  public function groupEnd() {$/;"	f
+group_reg	app/lib/dev.php	/^	$group_reg='\/$/;"	v
+header	app/lib/request.php	/^    $this->header = curl_exec($curl);$/;"	v
+header	app/lib/request.php	/^  private $header;$/;"	v
+humanize	app/vnd/Akinfector.php	/^    function humanize($word, $uppercase = '')$/;"	f
+i	app/vnd/FirePHP.php	/^        for( $i=0 ; $trace && $i<sizeof($trace) ; $i++ ) {$/;"	v
+i	app/vnd/FirePHP.php	/^      for( $i=0 ; $i<sizeof($trace) ; $i++ ) {$/;"	v
+i	app/vnd/FirePHP.php	/^    for( $i=0 ; $i<count($parts) ; $i++) {$/;"	v
+i	app/vnd/FirePHP.php	/^    for( $i=0 ; $i<sizeof($Trace) ; $i++ ) {$/;"	v
+inExceptionHandler	app/vnd/FirePHP.php	/^    $this->inExceptionHandler = false;$/;"	v
+inExceptionHandler	app/vnd/FirePHP.php	/^    $this->inExceptionHandler = true;$/;"	v
+inExceptionHandler	app/vnd/FirePHP.php	/^  protected $inExceptionHandler = false;$/;"	v
+info	app/lib/request.php	/^    $this->info = curl_getinfo($curl);$/;"	v
+info	app/lib/request.php	/^  private $info;$/;"	v
+info	app/vnd/FirePHP.php	/^  public function info($Object, $Label=null) {$/;"	f
+init	app/vnd/FirePHP.php	/^  public static function init() {$/;"	f
+install	app/init.php	/^    $install=new Con\\Install();$/;"	v
+instance	app/lib/dev.php	/^	static private $instance;$/;"	v
+instance	app/lib/singleton.php	/^  private static $instance;$/;"	v
+instance	app/vnd/FirePHP.php	/^  protected static $instance = null;$/;"	v
+irregular	app/vnd/Akinfector.php	/^        $irregular = array($/;"	v
+is_utf8	app/vnd/FirePHP.php	/^  protected static function is_utf8($str) {$/;"	f
+jsonEncode	app/vnd/FirePHP.php	/^  public function jsonEncode($Object, $skipObjectEncode=false)$/;"	f
+json_encode	app/vnd/FirePHP.php	/^  private function json_encode($var)$/;"	f
+json_name_value	app/vnd/FirePHP.php	/^  private function json_name_value($name, $value)$/;"	f
+json_objectStack	app/vnd/FirePHP.php	/^  private $json_objectStack = array();$/;"	v
+json_utf82utf16	app/vnd/FirePHP.php	/^  private function json_utf82utf16($utf8)$/;"	f
+k	app/vnd/Akinfector.php	/^            foreach ($got[1] as $k=>$v){$/;"	v
+key	app/vnd/FirePHP.php	/^        foreach ($Object as $key => $val) {$/;"	v
+lasttime	app/lib/dev.php	/^			$this->lasttime=microtime_float();$/;"	v
+lasttime	app/lib/dev.php	/^			$this->lasttime=microtime_float();}$/;"	v
+len	app/vnd/FirePHP.php	/^    $len=strlen($str);$/;"	v
+load	app/lib/autoloader.php	/^  public static function load($name)$/;"	f
+log	app/lib/dev.php	/^  public static function log($group,$message){$/;"	f
+log	app/vnd/FirePHP.php	/^  public function log($Object, $Label=null) {$/;"	f
+lowercased_word	app/vnd/Akinfector.php	/^        $lowercased_word = strtolower($word);$/;"	v
+manifest	build/init.php	/^    $manifest = \\sfYaml::load('manifest.yml');$/;"	v
+members	app/vnd/FirePHP.php	/^        $members = (array)$Object;$/;"	v
+messageIndex	app/vnd/FirePHP.php	/^  protected $messageIndex = 1;$/;"	v
+meta	app/vnd/FirePHP.php	/^    $meta = array();$/;"	v
+module_name	app/vnd/Akinfector.php	/^        $module_name = preg_replace('\/^.*::\/','',$module_name);$/;"	v
+modulize	app/vnd/Akinfector.php	/^    function modulize($module_description)$/;"	f
+msg	app/vnd/FirePHP.php	/^    	$msg = '['.$this->jsonEncode($msg_meta).','.$this->jsonEncode($Object, $skipFinalObjectEncode).']';$/;"	v
+msg	app/vnd/FirePHP.php	/^    	$msg = '{"'.$Label.'":'.$this->jsonEncode($Object, $skipFinalObjectEncode).'}';$/;"	v
+msg_meta	app/vnd/FirePHP.php	/^      $msg_meta = $Options;$/;"	v
+n	app/lib/autoloader.php	/^    $n=strtolower(str_replace('\\\\','\/',$name));$/;"	v
+name	app/vnd/Akinfector.php	/^    * Converts a class name to its table name according to rails$/;"	c
+name	app/vnd/Akinfector.php	/^    * Converts a table name to its class name according to rails$/;"	c
+name	app/vnd/FirePHP.php	/^            $name = $parts[2];$/;"	v
+name	app/vnd/FirePHP.php	/^            $name = 'private:'.$name;$/;"	v
+name	app/vnd/FirePHP.php	/^            $name = 'protected:'.$name;$/;"	v
+name	app/vnd/FirePHP.php	/^            $name = 'public:'.$name;$/;"	v
+name	app/vnd/FirePHP.php	/^            $name = 'static:'.$name;$/;"	v
+name	app/vnd/FirePHP.php	/^            $name = 'undeclared:'.$name;$/;"	v
+name	app/vnd/FirePHP.php	/^          $name = $raw_name;$/;"	v
+name	app/vnd/FirePHP.php	/^   * @param string $Class The class name of the object$/;"	c
+newException	app/vnd/FirePHP.php	/^  protected function newException($Message) {$/;"	f
+new_row	app/vnd/FirePHP.php	/^        $new_row = array();$/;"	v
+new_table	app/vnd/FirePHP.php	/^    $new_table = array();$/;"	v
+objectFilters	app/vnd/FirePHP.php	/^  protected $objectFilters = array();$/;"	v
+objectStack	app/vnd/FirePHP.php	/^  protected $objectStack = array();$/;"	v
+ok	app/lib/dependencies.php	/^  function ok()$/;"	f
+options	app/vnd/FirePHP.php	/^    $this->options = array_merge($this->options,$Options);$/;"	v
+options	app/vnd/FirePHP.php	/^  protected $options = array('maxObjectDepth' => 10,$/;"	v
+ord_var_c	app/vnd/FirePHP.php	/^                      case $ord_var_c == 0x08:$/;"	v
+ord_var_c	app/vnd/FirePHP.php	/^                      case $ord_var_c == 0x09:$/;"	v
+ord_var_c	app/vnd/FirePHP.php	/^                      case $ord_var_c == 0x0A:$/;"	v
+ord_var_c	app/vnd/FirePHP.php	/^                      case $ord_var_c == 0x0C:$/;"	v
+ord_var_c	app/vnd/FirePHP.php	/^                      case $ord_var_c == 0x0D:$/;"	v
+ord_var_c	app/vnd/FirePHP.php	/^                      case $ord_var_c == 0x22:$/;"	v
+ord_var_c	app/vnd/FirePHP.php	/^                      case $ord_var_c == 0x2F:$/;"	v
+ord_var_c	app/vnd/FirePHP.php	/^                      case $ord_var_c == 0x5C:$/;"	v
+ord_var_c	app/vnd/FirePHP.php	/^                  $ord_var_c = ord($var{$c});$/;"	v
+ordinalize	app/vnd/Akinfector.php	/^    function ordinalize($number)$/;"	f
+part	app/vnd/FirePHP.php	/^        $part = $parts[$i];$/;"	v
+parts	app/vnd/FirePHP.php	/^            $parts = explode("\\0", $name);$/;"	v
+parts	app/vnd/FirePHP.php	/^    $parts = explode("\\n",chunk_split($msg, 5000, "\\n"));$/;"	v
+paths	build/init.php	/^    $paths=implode(PATH_SEPARATOR,$paths_cfg);$/;"	v
+paths	test/init.php	/^    $paths=implode(PATH_SEPARATOR,$paths_cfg);$/;"	v
+paths_cfg	build/init.php	/^    $paths_cfg = \\sfYaml::load($paths_file);$/;"	v
+paths_cfg	test/init.php	/^    $paths_cfg = \\sfYaml::load($paths_file);$/;"	v
+paths_file	build/init.php	/^    $paths_file = 'build\/cfg\/paths.yml';$/;"	v
+paths_file	test/init.php	/^    $paths_file = 'test\/cfg\/paths.yml';$/;"	v
+plural	app/vnd/Akinfector.php	/^        $plural = array($/;"	v
+pluralize	app/vnd/Akinfector.php	/^    function pluralize($word)$/;"	f
+properties	app/vnd/FirePHP.php	/^                  $properties = array_map(array($this, 'json_name_value'),$/;"	v
+properties	app/vnd/FirePHP.php	/^              $properties = array_map(array($this, 'json_name_value'),$/;"	v
+properties	app/vnd/FirePHP.php	/^        $properties = array();$/;"	v
+raw_name	app/vnd/FirePHP.php	/^            $raw_name = "\\0".$class."\\0".$raw_name;$/;"	v
+raw_name	app/vnd/FirePHP.php	/^            $raw_name = "\\0".'*'."\\0".$raw_name;$/;"	v
+raw_name	app/vnd/FirePHP.php	/^        foreach( $members as $raw_name => $value ) {$/;"	v
+raw_name	app/vnd/FirePHP.php	/^        foreach( $properties as $raw_name => $property ) {$/;"	v
+reflectionClass	app/vnd/FirePHP.php	/^        $reflectionClass = new ReflectionClass($class);  $/;"	v
+registerAssertionHandler	app/vnd/FirePHP.php	/^  public function registerAssertionHandler($convertAssertionErrorsToExceptions=true, $throwAssertionExceptions=false)$/;"	f
+registerErrorHandler	app/vnd/FirePHP.php	/^  public function registerErrorHandler($throwErrorExceptions=true)$/;"	f
+registerExceptionHandler	app/vnd/FirePHP.php	/^  public function registerExceptionHandler()$/;"	f
+return	app/vnd/FirePHP.php	/^    $return = array();$/;"	v
+rule	app/vnd/Akinfector.php	/^        foreach ($plural as $rule => $replacement) {$/;"	v
+rule	app/vnd/Akinfector.php	/^        foreach ($singular as $rule => $replacement) {$/;"	v
+separate_class_name_and_id_with_underscore	app/vnd/Akinfector.php	/^    function foreignKey($class_name, $separate_class_name_and_id_with_underscore = true)$/;"	v
+setEnabled	app/vnd/FirePHP.php	/^  public function setEnabled($Enabled) {$/;"	f
+setHeader	app/vnd/FirePHP.php	/^  protected function setHeader($Name, $Value) {$/;"	f
+setObjectFilter	app/vnd/FirePHP.php	/^  public function setObjectFilter($Class, $Filter) {$/;"	f
+setOptions	app/vnd/FirePHP.php	/^  public function setOptions($Options) {$/;"	f
+setProcessorUrl	app/vnd/FirePHP.php	/^  public function setProcessorUrl($URL)$/;"	f
+setRendererUrl	app/vnd/FirePHP.php	/^  public function setRendererUrl($URL)$/;"	f
+set_url	app/lib/request.php	/^  public function set_url($url)$/;"	f
+severity	app/vnd/FirePHP.php	/^          case E_DEPRECATED: $severity = 'E_DEPRECATED'; break;$/;"	v
+severity	app/vnd/FirePHP.php	/^          case E_NOTICE: $severity = 'E_NOTICE'; break;$/;"	v
+severity	app/vnd/FirePHP.php	/^          case E_RECOVERABLE_ERROR: $severity = 'E_RECOVERABLE_ERROR'; break;$/;"	v
+severity	app/vnd/FirePHP.php	/^          case E_STRICT: $severity = 'E_STRICT'; break;$/;"	v
+severity	app/vnd/FirePHP.php	/^          case E_USER_DEPRECATED: $severity = 'E_USER_DEPRECATED'; break;$/;"	v
+severity	app/vnd/FirePHP.php	/^          case E_USER_ERROR: $severity = 'E_USER_ERROR'; break;$/;"	v
+severity	app/vnd/FirePHP.php	/^          case E_USER_NOTICE: $severity = 'E_USER_NOTICE'; break;$/;"	v
+severity	app/vnd/FirePHP.php	/^          case E_USER_WARNING: $severity = 'E_USER_WARNING'; break;$/;"	v
+severity	app/vnd/FirePHP.php	/^          case E_WARNING: $severity = 'E_WARNING'; break;$/;"	v
+severity	app/vnd/FirePHP.php	/^        $severity = false;$/;"	v
+singular	app/vnd/Akinfector.php	/^        $singular = array ($/;"	v
+singularize	app/vnd/Akinfector.php	/^    function singularize($word)$/;"	f
+skipFinalObjectEncode	app/vnd/FirePHP.php	/^          $skipFinalObjectEncode = true;$/;"	v
+skipFinalObjectEncode	app/vnd/FirePHP.php	/^        $skipFinalObjectEncode = true;$/;"	v
+skipFinalObjectEncode	app/vnd/FirePHP.php	/^      $skipFinalObjectEncode = true;$/;"	v
+skipFinalObjectEncode	app/vnd/FirePHP.php	/^    $skipFinalObjectEncode = false;$/;"	v
+skipObjectEncode	app/vnd/FirePHP.php	/^  public function jsonEncode($Object, $skipObjectEncode=false)$/;"	v
+strlen_var	app/vnd/FirePHP.php	/^              $strlen_var = strlen($var);$/;"	v
+structure_index	app/vnd/FirePHP.php	/^      $structure_index = 2;$/;"	v
+structure_index	app/vnd/FirePHP.php	/^    $structure_index = 1;$/;"	v
+table	app/vnd/FirePHP.php	/^  public function table($Label, $Table) {$/;"	f
+tableize	app/vnd/Akinfector.php	/^    function tableize($class_name)$/;"	f
+test_collect_wp	test/test_install.php	/^  public function test_collect_wp()$/;"	f
+test_deps	test/test_dependencies.php	/^  public function test_deps()$/;"	f
+test_go	test/test_install.php	/^  public function test_go()$/;"	f
+throwAssertionExceptions	app/vnd/FirePHP.php	/^    $this->throwAssertionExceptions = $throwAssertionExceptions;$/;"	v
+throwAssertionExceptions	app/vnd/FirePHP.php	/^  protected $throwAssertionExceptions = false;$/;"	v
+throwAssertionExceptions	app/vnd/FirePHP.php	/^  public function registerAssertionHandler($convertAssertionErrorsToExceptions=true, $throwAssertionExceptions=false)$/;"	v
+throwErrorExceptions	app/vnd/FirePHP.php	/^    $this->throwErrorExceptions = $throwErrorExceptions;$/;"	v
+throwErrorExceptions	app/vnd/FirePHP.php	/^  protected $throwErrorExceptions = true;$/;"	v
+time	app/lib/dev.php	/^			$this->time=microtime_float();$/;"	v
+titleize	app/vnd/Akinfector.php	/^    function titleize($word, $uppercase = '')$/;"	f
+toFullName	app/vnd/Akinfector.php	/^    function toFullName($name, $correct)$/;"	f
+trace	app/vnd/FirePHP.php	/^        $trace = debug_backtrace();$/;"	v
+trace	app/vnd/FirePHP.php	/^      $trace = $Object->getTrace();$/;"	v
+trace	app/vnd/FirePHP.php	/^      $trace = debug_backtrace();$/;"	v
+trace	app/vnd/FirePHP.php	/^  public function trace($Label) {$/;"	f
+unaccent	app/vnd/Akinfector.php	/^    function unaccent($text)$/;"	f
+uncountable	app/vnd/Akinfector.php	/^        $uncountable = array('equipment', 'information', 'rice', 'money', 'species', 'series', 'fish', 'sheep');$/;"	v
+uncountable	app/vnd/Akinfector.php	/^        $uncountable = array('equipment', 'information', 'rice', 'money', 'species', 'series', 'fish', 'sheep','sms');$/;"	v
+underscore	app/vnd/Akinfector.php	/^    function underscore($word)$/;"	f
+uppercase	app/vnd/Akinfector.php	/^        $uppercase = $uppercase == 'all' ? 'ucwords' : 'ucfirst';$/;"	v
+uppercase	app/vnd/Akinfector.php	/^        $uppercase = $uppercase == 'first' ? 'ucfirst' : 'ucwords';$/;"	v
+uppercase	app/vnd/Akinfector.php	/^    function humanize($word, $uppercase = '')$/;"	v
+uppercase	app/vnd/Akinfector.php	/^    function titleize($word, $uppercase = '')$/;"	v
+url	app/lib/request.php	/^    $this->url = $url;$/;"	v
+url	app/lib/request.php	/^    $this->url=$url;$/;"	v
+url	app/lib/request.php	/^  private $url;$/;"	v
+urlize	app/vnd/Akinfector.php	/^    function urlize($text)$/;"	f
+utf16	app/vnd/FirePHP.php	/^                          $utf16 = $this->json_utf82utf16($char);$/;"	v
+variablize	app/vnd/Akinfector.php	/^    function variablize($word)$/;"	f
+vars	app/vnd/FirePHP.php	/^              $vars = self::encodeObject($var);$/;"	v
+warn	app/vnd/FirePHP.php	/^  public function warn($Object, $Label=null) {$/;"	f
+word	app/vnd/Akinfector.php	/^            $word = str_replace($got[0],$got[1],$word);$/;"	v
+word	app/vnd/Akinfector.php	/^        $word = Inflector::camelize($word);$/;"	v

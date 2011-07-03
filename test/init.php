@@ -1,4 +1,5 @@
 <?php 
+namespace 0x3e\Test;
 Init::go();
 Class Init
 {
@@ -8,7 +9,7 @@ Class Init
     include("SymfonyComponents/YAML/sfYaml.php");
     include("app/lib/autoloader.php");
     $paths_file = 'test/cfg/paths.yml';
-    $paths_cfg = sfYaml::load($paths_file);
+    $paths_cfg = \sfYaml::load($paths_file);
     if(!is_array($paths_cfg))
       exit($paths_file);
     $paths=implode(PATH_SEPARATOR,$paths_cfg);

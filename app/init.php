@@ -1,4 +1,5 @@
 <?php 
+namespace App;
 Init::go();
 Class Init
 {
@@ -7,12 +8,10 @@ Class Init
     chdir(dirname(__File__)."/..");
     include("SymfonyComponents/YAML/sfYaml.php");
     include("app/lib/autoloader.php");
-    $paths_file = 'app/cfg/paths.yml';
-    $paths_cfg = sfYaml::load($paths_file);
-    if(!is_array($paths_cfg))
-      exit($paths_file);
-    $paths=implode(PATH_SEPARATOR,$paths_cfg);
-    set_include_path(get_include_path() . PATH_SEPARATOR . $paths);
-    spl_autoload_register("Autoloader::load");
+    spl_autoload_extensions(".php");
+    set_include_path(get_include_path() . './');
+    spl_autoload_register('App\Lib\Autoloader::load');
+    $install=new Con\Install();
+    $install->go();
   }
 }

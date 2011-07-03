@@ -1,7 +1,10 @@
-<?php Class Autoloader
+<?php 
+namespace App\Lib;
+Class Autoloader
 {
   public static function load($name)
   {
-    if(include(strtolower($name.'.php')));
+    $n=strtolower(str_replace('\\','/',$name));
+    include($n.'.php');
   }
 }
