@@ -34,6 +34,13 @@ Class Request
   {
     return $this->info['filetime'];
   }
+
+  public function get_filename() 
+  {
+    if(isset($this->header['Content-Disposition']['filename']))
+      return $this->header['Content-Disposition']['filename'];
+  }
+
   private function set_header($header)
   {
     $header = explode("\n",$header);
@@ -51,6 +58,25 @@ Class Request
         if(isset($tmp[1]))
         {
           $this->header[$tmp[0]]=$tmp[1];
+        }
+        if($tmp[0]=='Content-Disposition')
+        {
+          $cd=array();
+          $con_disp=explode(';',$tmp[1]);
+          foreach($con_disp as $c)
+          {
+            $c=trim($c);
+            if($c=='attachment')
+            {
+              $cd['attachment']='attachment';
+            }
+            else
+            {
+              $x=explode('=',$c);
+              $cd[$x[0]]=$x[1];
+            }
+          }
+          $this->header[$tmp[0]]=$cd;
         }
       }
     }

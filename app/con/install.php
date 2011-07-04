@@ -2,16 +2,14 @@
 
 namespace App\Con;
 
-Class Install
+use App\Lib\Config as Config;
+use App\Lib\Request as Request;
+use App\Lib\Registry as Registry;
+
+Class Install Extends Registry 
 {
-  //TODO probably should be a singleton
-  // for the moment lets just get something working
-  function __construct()
-  {
-  }
   function go()
   {
-
     //$this->download_wp();
     //$this->check_archive();
     $this->check_for_update();
@@ -34,9 +32,11 @@ Class Install
   }
   private function check_for_update()
   {
-    $conf=\App\Lib\Config::get();
-    $req=new \App\Lib\Request($conf->get_wp_url());
+    $conf=Config::get_instance();
+    $req=new Request($conf->get_wp_url());
     $req->get_head();
-    print_r($req);
+    $name=$req->get_filename();
+    if($name)
+      var_dump($name);
   }
 }

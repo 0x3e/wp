@@ -29,12 +29,13 @@ Type	app/vnd/FirePHP.php	/^        $Type = self::LOG;$/;"	v
 Type	app/vnd/FirePHP.php	/^      $Type = func_get_arg(2);$/;"	v
 Type	app/vnd/FirePHP.php	/^      $Type = self::EXCEPTION;$/;"	v
 Type	app/vnd/FirePHP.php	/^    $Type = null;$/;"	v
+__call	app/lib/config.php	/^  public function __call($function, $args)$/;"	f
 __clone	app/lib/singleton.php	/^  public function __clone()$/;"	f
 __construct	app/con/install.php	/^  function __construct()$/;"	f
-__construct	app/lib/config.php	/^  private function __construct()$/;"	f
+__construct	app/lib/config.php	/^  protected function __construct()$/;"	f
 __construct	app/lib/dev.php	/^  private function __construct(){$/;"	f
 __construct	app/lib/request.php	/^  public function __construct($url=null)$/;"	f
-__construct	app/lib/singleton.php	/^  private function __construct() $/;"	f
+__construct	app/lib/singleton.php	/^  protected function __construct() $/;"	f
 __construct	app/vnd/FirePHP.php	/^  function __construct() {$/;"	f
 __construct	build/init.php	/^  function __construct()$/;"	f
 __construct	wp-install.php	/^  function __construct()$/;"	f
@@ -53,11 +54,11 @@ bits	app/vnd/FirePHP.php	/^            elseif($c >= 240) $bits=4;$/;"	v
 bits	app/vnd/FirePHP.php	/^            elseif($c >= 248) $bits=5;$/;"	v
 bits	app/vnd/FirePHP.php	/^            elseif($c >= 252) $bits=6;$/;"	v
 bits	app/vnd/FirePHP.php	/^    $bits=0;$/;"	v
-c	app/lib/singleton.php	/^      $c = __CLASS__;$/;"	v
+c	app/lib/singleton.php	/^      $c = get_called_class();$/;"	v
 c	app/vnd/FirePHP.php	/^        $c=ord($str[$i]);$/;"	v
 c	app/vnd/FirePHP.php	/^    $c=0; $b=0;$/;"	v
 camelize	app/vnd/Akinfector.php	/^    function camelize($word)$/;"	f
-cfg	app/lib/config.php	/^    $this->cfg = \\sfYaml::load($paths_file);$/;"	v
+cfg	app/lib/config.php	/^    $this->cfg = \\sfYaml::load($file);$/;"	v
 cfg	app/lib/config.php	/^  public $cfg;$/;"	v
 char	app/vnd/FirePHP.php	/^                          $char = pack('C*', $ord_var_c, ord($var{$c + 1}));$/;"	v
 char	app/vnd/FirePHP.php	/^                          $char = pack('C*', $ord_var_c,$/;"	v
@@ -118,9 +119,10 @@ go	wp-install.php	/^  function go()$/;"	f
 group	app/vnd/FirePHP.php	/^  public function group($Name, $Options=null) {$/;"	f
 groupEnd	app/vnd/FirePHP.php	/^  public function groupEnd() {$/;"	f
 group_reg	app/lib/dev.php	/^	$group_reg='\/$/;"	v
-header	app/lib/request.php	/^    $this->header = curl_exec($curl);$/;"	v
+header	app/lib/request.php	/^    $header = explode("\\n",$header);$/;"	v
 header	app/lib/request.php	/^  private $header;$/;"	v
 humanize	app/vnd/Akinfector.php	/^    function humanize($word, $uppercase = '')$/;"	f
+i	app/lib/request.php	/^    $i=0;$/;"	v
 i	app/vnd/FirePHP.php	/^        for( $i=0 ; $trace && $i<sizeof($trace) ; $i++ ) {$/;"	v
 i	app/vnd/FirePHP.php	/^      for( $i=0 ; $i<sizeof($trace) ; $i++ ) {$/;"	v
 i	app/vnd/FirePHP.php	/^    for( $i=0 ; $i<count($parts) ; $i++) {$/;"	v
@@ -201,9 +203,12 @@ paths_file	build/init.php	/^    $paths_file = 'build\/cfg\/paths.yml';$/;"	v
 paths_file	test/init.php	/^    $paths_file = 'test\/cfg\/paths.yml';$/;"	v
 plural	app/vnd/Akinfector.php	/^        $plural = array($/;"	v
 pluralize	app/vnd/Akinfector.php	/^    function pluralize($word)$/;"	f
+pos	app/lib/config.php	/^    $pos=strpos($function, "_");$/;"	v
+prefix	app/lib/config.php	/^    $prefix=substr($function,0,$pos+1);$/;"	v
 properties	app/vnd/FirePHP.php	/^                  $properties = array_map(array($this, 'json_name_value'),$/;"	v
 properties	app/vnd/FirePHP.php	/^              $properties = array_map(array($this, 'json_name_value'),$/;"	v
 properties	app/vnd/FirePHP.php	/^        $properties = array();$/;"	v
+raw_header	app/lib/request.php	/^    $raw_header = curl_exec($curl);$/;"	v
 raw_name	app/vnd/FirePHP.php	/^            $raw_name = "\\0".$class."\\0".$raw_name;$/;"	v
 raw_name	app/vnd/FirePHP.php	/^            $raw_name = "\\0".'*'."\\0".$raw_name;$/;"	v
 raw_name	app/vnd/FirePHP.php	/^        foreach( $members as $raw_name => $value ) {$/;"	v
@@ -212,6 +217,7 @@ reflectionClass	app/vnd/FirePHP.php	/^        $reflectionClass = new ReflectionC
 registerAssertionHandler	app/vnd/FirePHP.php	/^  public function registerAssertionHandler($convertAssertionErrorsToExceptions=true, $throwAssertionExceptions=false)$/;"	f
 registerErrorHandler	app/vnd/FirePHP.php	/^  public function registerErrorHandler($throwErrorExceptions=true)$/;"	f
 registerExceptionHandler	app/vnd/FirePHP.php	/^  public function registerExceptionHandler()$/;"	f
+req	app/con/install.php	/^    $req=new \\App\\Lib\\Request($conf->get_wp_url());$/;"	v
 return	app/vnd/FirePHP.php	/^    $return = array();$/;"	v
 rule	app/vnd/Akinfector.php	/^        foreach ($plural as $rule => $replacement) {$/;"	v
 rule	app/vnd/Akinfector.php	/^        foreach ($singular as $rule => $replacement) {$/;"	v
@@ -222,6 +228,7 @@ setObjectFilter	app/vnd/FirePHP.php	/^  public function setObjectFilter($Class, 
 setOptions	app/vnd/FirePHP.php	/^  public function setOptions($Options) {$/;"	f
 setProcessorUrl	app/vnd/FirePHP.php	/^  public function setProcessorUrl($URL)$/;"	f
 setRendererUrl	app/vnd/FirePHP.php	/^  public function setRendererUrl($URL)$/;"	f
+set_header	app/lib/request.php	/^  private function set_header($header)$/;"	f
 set_url	app/lib/request.php	/^  public function set_url($url)$/;"	f
 severity	app/vnd/FirePHP.php	/^          case E_DEPRECATED: $severity = 'E_DEPRECATED'; break;$/;"	v
 severity	app/vnd/FirePHP.php	/^          case E_NOTICE: $severity = 'E_NOTICE'; break;$/;"	v
@@ -255,6 +262,7 @@ throwErrorExceptions	app/vnd/FirePHP.php	/^    $this->throwErrorExceptions = $th
 throwErrorExceptions	app/vnd/FirePHP.php	/^  protected $throwErrorExceptions = true;$/;"	v
 time	app/lib/dev.php	/^			$this->time=microtime_float();$/;"	v
 titleize	app/vnd/Akinfector.php	/^    function titleize($word, $uppercase = '')$/;"	f
+tmp	app/lib/request.php	/^        $tmp=explode(":",$line);$/;"	v
 toFullName	app/vnd/Akinfector.php	/^    function toFullName($name, $correct)$/;"	f
 trace	app/vnd/FirePHP.php	/^        $trace = debug_backtrace();$/;"	v
 trace	app/vnd/FirePHP.php	/^      $trace = $Object->getTrace();$/;"	v
