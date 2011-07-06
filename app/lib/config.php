@@ -1,6 +1,6 @@
 <?php
 namespace App\Lib;
-Class Config Extends Singleton 
+Class Config Extends Registry
 {
   public $cfg;
   protected function __construct()

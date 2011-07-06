@@ -1,5 +1,6 @@
 <?php 
 namespace App;
+use \App\Con\Install as Install;
 Init::go();
 Class Init
 {
@@ -11,7 +12,7 @@ Class Init
     spl_autoload_extensions(".php");
     set_include_path(get_include_path() . './');
     spl_autoload_register('App\Lib\Autoloader::load');
-    $install=new Con\Install();
+    $install=Install::get_instance();
     $install->go();
   }
 }
