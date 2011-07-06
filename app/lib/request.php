@@ -5,6 +5,7 @@ Class Request
   private $info;
   private $header;
   private $url;
+  private $body;
 
   public function __construct($url=null)
   {
@@ -22,7 +23,7 @@ Class Request
     $raw_header = curl_exec($curl);
     $this->info = curl_getinfo($curl);
     curl_close($curl);
-    $this->set_header($raw_header);
+    $this->set_downloaded_head($raw_header);
   }
 
   public function set_url($url)
@@ -41,7 +42,7 @@ Class Request
       return $this->header['Content-Disposition']['filename'];
   }
 
-  private function set_header($header)
+  private function set_downloaded_head($header)
   {
     $header = explode("\n",$header);
     $i=0;
@@ -80,5 +81,35 @@ Class Request
         }
       }
     }
+  }
+  public function download($download_path=null,$url=null)
+  {
+    if(!$download_path)
+      $download_path=tmpfile();
+
+    $fw = fopen($download_path, "wb");
+
+    if(!$url)
+      $url=$this->url;
+
+    if(!$url||!$download_path)
+      return false;
+
+    $fr = fopen($url, "rb");
+    while(!feof($fr)) 
+    {
+      fwrite($fw,fread($fr,8192),8192);
+    }
+    return $download_path;
+  }
+  public function get_body($url=null)
+  {
+    if(!$url)
+      $url=$this->url;
+
+    if(!$this->body) 
+      $this->body=file_get_contents($url);
+
+    return $this->body;
   }
 }

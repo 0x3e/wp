@@ -8,35 +8,57 @@ use App\Lib\Registry as Registry;
 
 Class Install Extends Registry 
 {
-  function go()
+  public function go()
   {
-    $this->check_for_update();
-    //$this->download_wp();
-    //$this->check_archive();
+    $conf=Config::get_instance();
+    $url=$conf->get_wp_url();
+    //$latest=$this->get_latest_version_name($url);
+    $latest='wordpress-3.2.tar.gz';
+    $tmp_file='app/up/'.$latest;
+    //$this->download_wp($tmp_file,$url);
+    $tmp_output='app/up/';
+    if($this->unpack_archive($tmp_file,$tmp_output))
+      echo "downloaded $tmp_file and extracted\n";
   }
-  private function download_wp()
+  private function download_wp($file_name,$url)
   {
-    $fr = fopen("http://wordpress.org/latest.tar.gz", "rb");
-    $fw = fopen("app/up/latest.tar.gz", "wb");
-    while(!feof($fr)) 
-    {
-      fwrite($fw,fread($fr,8192),8192);
-    }
+    $req=new Request();
+    $req->download($file_name,$url);
   }
-
-  private function check_archive()
+  private function unpack_archive($file,$tmp_output)
   {
     include('Archive/Tar.php');
-    $file=new \Archive_Tar('app/up/latest.tar.gz','gz');
-    //print_r($file->listContent());
+    $tar=new \Archive_Tar($file,'gz');
+    $list=$tar->listContent();
+    if($list)
+    {
+      $tar->extract($tmp_output);
+      return true;
+    }
   }
   private function check_for_update()
   {
+    $wp_version=3.1;
+    $php_version=phpversion();
+    $url = "http://api.wordpress.org/core/version-check/1.5/"
+      ."?version=$wp_version&php=$php_version";
+      /*
+      ."&locale=$locale"
+      ."&mysql=$mysql_version&local_package=$local_package"
+      ."&blogs=$num_blogs&users={$user_count['total_users']}"
+      ."&multisite_enabled=$multisite_enabled";
+      */
     $conf=Config::get_instance();
-    $req=new Request($conf->get_wp_url());
+    $req=new Request($url);
+    echo $req->get_body();
+  }
+  private function get_latest_version_name($url)
+  {
+    $req=new Request($url);
     $req->get_head();
     $name=$req->get_filename();
     if($name)
-      var_dump($name);
+      return $name;
   }
 }
+
