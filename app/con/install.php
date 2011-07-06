@@ -11,10 +11,9 @@ Class Install
   }
   function go()
   {
-
+    $this->check_for_update();
     //$this->download_wp();
     //$this->check_archive();
-    $this->check_for_update();
   }
   private function download_wp()
   {
