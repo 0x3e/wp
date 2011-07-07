@@ -12,18 +12,18 @@ Class Install Extends Registry
   {
     $conf=Config::get_instance();
     $url=$conf->get_wp_url();
-    //$latest=$this->get_latest_version_name($url);
+    $latest=$this->get_latest_version_name($url);
     $latest='wordpress-3.2.tar.gz';
     $tmp_file='app/up/'.$latest;
-    //$this->download_wp($tmp_file,$url);
+    $this->download_wp($tmp_file,$url);
     $tmp_output='app/up/';
     if($this->unpack_archive($tmp_file,$tmp_output))
-      echo "downloaded $tmp_file and extracted\n";
+      echo "\nextracted to $tmp_output\n";
   }
   private function download_wp($file_name,$url)
   {
     $req=new Request();
-    $req->download($file_name,$url);
+    $req->download($file_name,$url,true);
   }
   private function unpack_archive($file,$tmp_output)
   {

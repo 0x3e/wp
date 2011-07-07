@@ -82,7 +82,7 @@ Class Request
       }
     }
   }
-  public function download($download_path=null,$url=null)
+  public function download($download_path=null,$url=null,$progress=null)
   {
     if(!$download_path)
       $download_path=tmpfile();
@@ -96,10 +96,17 @@ Class Request
       return false;
 
     $fr = fopen($url, "rb");
+    if($progress)
+      echo "\nstart downloading $url\n";
     while(!feof($fr)) 
     {
       fwrite($fw,fread($fr,8192),8192);
+      if($progress)
+        echo ".";
     }
+    if($progress)
+      echo "\nfinished download to $download_path\n";
+
     return $download_path;
   }
   public function get_body($url=null)
