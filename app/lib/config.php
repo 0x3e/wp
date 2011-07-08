@@ -18,10 +18,8 @@ Class Config Extends Registry
       switch($prefix)
       {
         case "get_":
-          return $this->cfg[$args[0]];
-        break;
-        case "set_":
-          return $this->cfg[$args[0]] = $args[1];
+          if(isset($this->cfg[$args[0]]))
+            return $this->cfg[$args[0]];
         break;
       }
 		}
