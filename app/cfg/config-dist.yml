@@ -1,0 +1,18 @@
+wp:
+  url: 'http://wordpress.org/latest.tar.gz'
+  production:
+    db: prod_wp
+    db_user: root
+    host: localhost
+    table_prefix: prod_wp_
+  pre_production:
+    db: pre_wp
+    db_user: root
+    host: localhost
+    table_prefix: pre_wp_
+  dev:
+    db: wp
+    db_user: root
+    host: localhost
+    table_prefix: wp_
+    dir: wp
