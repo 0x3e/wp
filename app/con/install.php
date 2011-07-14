@@ -12,16 +12,25 @@ Class Install Extends Registry
   public function go()
   {
     $conf=Config::get_instance();
-    $wp_conf=$conf->get_wp();
-    $wp_url=$wp_conf['url'];
-    $wp_dev_conf=$wp_conf['dev'];
+    $wp=$conf->get_wp();
 
-    $latest=$this->get_latest_version_name($wp_url);
+    $latest=$this->get_latest_version_name($wp['url']);
     if(!$latest)
       return;
-    $current=new Kv('current_version');
+    $c=new Kv('current_version');
+    if(!$c->get_v()) 
+    {
+      echo "all new\n";
+      $c->set_v($latest);
+    }
+    elseif($c->get_v()>=$latest)
+    {
+      echo "up to date\n";
+      return;
+    }
+    echo "downloading update\n";
     $tmp_file='app/up/'.$latest;
-    $this->download_wp($tmp_file,$wp_url);
+    $this->download_wp($tmp_file,$wp['url']);
     $tmp_output='app/up/';
     if($this->unpack_archive($tmp_file,$tmp_output))
     {
