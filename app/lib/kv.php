@@ -20,7 +20,8 @@ Class Kv
     }
     else
     {
-      $this->v=$st->fetch();
+      $v=$st->fetch();
+      $this->v=$v['v'];
       $st=null;
     }
     $dh=null;

@@ -18,15 +18,15 @@ Class Install Extends Registry
     if(!$latest)
       return;
     $c=new Kv('current_version');
-    if(!$c->get_v()) 
-    {
-      echo "all new\n";
-      $c->set_v($latest);
-    }
-    elseif($c->get_v()>=$latest)
+    $current=$c->get_v();
+    if($current==$latest)
     {
       echo "up to date\n";
       return;
+    }
+    elseif(!$current) 
+    {
+      echo "all new\n";
     }
     echo "downloading update\n";
     $tmp_file='app/up/'.$latest;
@@ -39,8 +39,10 @@ Class Install Extends Registry
       rename($tmp_output."wordpress","app/vnd/wp/".$name);
       echo "\nrenamed ".$tmp_output."wordpress"." app/vnd/wp/".$name."\n";
       symlink("app/vnd/wp/".$name,"tmp_wp_link");
+      copy('app/cfg/wp-config.php','tmp_wp_link/wp-config.php');
       rename("tmp_wp_link","wp");
       echo "\nsymlinked app/vnd/wp".$name." wp\n";
+      $c->set_v($latest);
     }
   }
   private function download_wp($file_name,$url)
