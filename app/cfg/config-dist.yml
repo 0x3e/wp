@@ -1,18 +1,21 @@
+env: dev
 wp:
-  url: 'http://wordpress.org/latest.tar.gz'
+  dir: wp
+db:
   production:
-    db: prod_wp
-    db_user: root
+    db: prod_app
+    user: username
+    password: ahardpass
     host: localhost
-    table_prefix: prod_wp_
+    prefix: prod_app_
   pre_production:
-    db: pre_wp
-    db_user: root
+    db: pre_app
+    user: username
+    password: ahardpass
     host: localhost
-    table_prefix: pre_wp_
+    prefix: pre_app_
   dev:
-    db: wp
-    db_user: root
-    host: localhost
-    table_prefix: wp_
-    dir: wp
+    db: app
+    user: username
+    password: ahardpass
+    prefix: app_

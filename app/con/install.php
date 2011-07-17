@@ -36,8 +36,11 @@ Class Install Extends Registry
     {
       $name=substr($latest,0,-7);
       echo "\nextracted to $tmp_output\n";
+      if(!file_exists("app/vnd/wp/"))
+        mkdir("app/vnd/wp/");
       rename($tmp_output."wordpress","app/vnd/wp/".$name);
       echo "\nrenamed ".$tmp_output."wordpress"." app/vnd/wp/".$name."\n";
+      symlink("app/theme/wp/0x3e","app/vnd/wp/".$name."/wp-content/theme/0x3e");
       symlink("app/vnd/wp/".$name,"tmp_wp_link");
       copy('app/cfg/wp-config.php','tmp_wp_link/wp-config.php');
       rename("tmp_wp_link","wp");
