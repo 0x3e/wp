@@ -1,0 +1,134 @@
+Only in app/vnd/wp/wordpress-3.2.1: favicon.ico
+Only in app/vnd/wp/wordpress-3.2.1: .htaccess
+diff -crB app/vnd/wp/wordpress-3.2.1/index.php app/up/wordpress/index.php
+*** app/vnd/wp/wordpress-3.2.1/index.php	2011-07-16 21:50:41.060142817 +1000
+--- app/up/wordpress/index.php	2008-05-26 06:33:13.000000000 +1000
+***************
+*** 15,18 ****
+  
+  /** Loads the WordPress Environment and Template */
+  require('./wp-blog-header.php');
+! ?>
+--- 15,18 ----
+  
+  /** Loads the WordPress Environment and Template */
+  require('./wp-blog-header.php');
+! ?>
+\ No newline at end of file
+diff -crB app/vnd/wp/wordpress-3.2.1/wp-blog-header.php app/up/wordpress/wp-blog-header.php
+*** app/vnd/wp/wordpress-3.2.1/wp-blog-header.php	2011-07-16 21:50:58.349330953 +1000
+--- app/up/wordpress/wp-blog-header.php	2010-11-21 08:44:11.000000000 +1100
+***************
+*** 16,19 ****
+  
+  }
+  
+! ?>
+--- 17,20 ----
+  
+  }
+  
+! ?>
+\ No newline at end of file
+Only in app/vnd/wp/wordpress-3.2.1: wp-config.php
+Only in app/vnd/wp/wordpress-3.2.1/wp-content/themes: 0x3e
+diff -crB app/vnd/wp/wordpress-3.2.1/wp-includes/load.php app/up/wordpress/wp-includes/load.php
+*** app/vnd/wp/wordpress-3.2.1/wp-includes/load.php	2011-07-16 18:20:13.298010005 +1000
+--- app/up/wordpress/wp-includes/load.php	2011-06-30 02:50:07.000000000 +1000
+***************
+*** 1,5 ****
+  <?php
+- Dev::log("info","wp-includes/load.php");
+  /**
+   * These functions are needed to load WordPress.
+   *
+--- 1,4 ----
+diff -crB app/vnd/wp/wordpress-3.2.1/wp-includes/template-loader.php app/up/wordpress/wp-includes/template-loader.php
+*** app/vnd/wp/wordpress-3.2.1/wp-includes/template-loader.php	2011-07-16 18:58:35.045999027 +1000
+--- app/up/wordpress/wp-includes/template-loader.php	2010-04-28 17:48:09.000000000 +1000
+***************
+*** 1,5 ****
+  <?php
+- Dev::log("info","wp-includes/template-loader.php");
+  /**
+   * Loads the correct template based on the visitor's url
+   * @package WordPress
+--- 1,4 ----
+***************
+*** 22,36 ****
+  if ( defined('WP_USE_THEMES') && WP_USE_THEMES ) :
+  	$template = false;
+  	if     ( is_404()            && $template = get_404_template()            ) :
+-     Dev::log("info","is_404");
+  	elseif ( is_search()         && $template = get_search_template()         ) :
+-     Dev::log("info","is_search");
+  	elseif ( is_tax()            && $template = get_taxonomy_template()       ) :
+-     Dev::log("info","is_tax");
+  	elseif ( is_front_page()     && $template = get_front_page_template()     ) :
+-     Dev::log("info","is_front_page");
+  	elseif ( is_home()           && $template = get_home_template()           ) :
+-     Dev::log("info","is_home");
+  	elseif ( is_attachment()     && $template = get_attachment_template()     ) :
+  		remove_filter('the_content', 'prepend_attachment');
+  	elseif ( is_single()         && $template = get_single_template()         ) :
+--- 21,30 ----
+***************
+*** 43,55 ****
+  	elseif ( is_comments_popup() && $template = get_comments_popup_template() ) :
+  	elseif ( is_paged()          && $template = get_paged_template()          ) :
+  	else :
+-     Dev::log("info","get_index_template");
+  		$template = get_index_template();
+-     Dev::log("info","get_index_template fin");
+  	endif;
+  	if ( $template = apply_filters( 'template_include', $template ) )
+  		include( $template );
+-   Dev::log("info","wp-includes/template-loader.php finished");
+  	return;
+  endif;
+  
+--- 37,46 ----
+diff -crB app/vnd/wp/wordpress-3.2.1/wp-load.php app/up/wordpress/wp-load.php
+*** app/vnd/wp/wordpress-3.2.1/wp-load.php	2011-07-16 21:52:31.681348637 +1000
+--- app/up/wordpress/wp-load.php	2011-06-30 02:50:07.000000000 +1000
+***************
+*** 1,7 ****
+  <?php
+- include(dirname(__File__).'/../../../init.php');
+- \App\Init::wp();
+- Dev::log("info","wp-load.php");
+  /**
+   * Bootstrap file for setting the ABSPATH constant
+   * and loading the wp-config.php file. The wp-config.php
+--- 1,4 ----
+***************
+*** 60,63 ****
+  
+  }
+  
+! ?>
+--- 57,60 ----
+  
+  }
+  
+! ?>
+\ No newline at end of file
+diff -crB app/vnd/wp/wordpress-3.2.1/wp-settings.php app/up/wordpress/wp-settings.php
+*** app/vnd/wp/wordpress-3.2.1/wp-settings.php	2011-07-16 18:44:09.291383343 +1000
+--- app/up/wordpress/wp-settings.php	2011-06-30 02:50:07.000000000 +1000
+***************
+*** 1,5 ****
+  <?php
+- Dev::log("info","wp-settings.php");
+  /**
+   * Used to set up and fix common variables and include
+   * the WordPress procedural and class library.
+--- 1,4 ----
+***************
+*** 322,326 ****
+   * @since 3.0.0
+   */
+  do_action('wp_loaded');
+- Dev::log("info","wp-settings.php finished");
+  ?>
+--- 321,324 ----
