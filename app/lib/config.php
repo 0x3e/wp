@@ -6,7 +6,10 @@ Class Config Extends Registry
   protected function __construct()
   {
     $file = 'app/cfg/config.yml';
-    $this->cfg = \sfYaml::load($file);
+    if(file_exists($file))
+      $this->cfg = \sfYaml::load($file);
+    else
+      die("no config\n");
   }
   public function __call($function, $args)
   {

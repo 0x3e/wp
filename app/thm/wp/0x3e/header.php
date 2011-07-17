@@ -16,5 +16,6 @@ Dev::log("info","theme header.php");
 		echo ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
 	?></title>
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+<?php	wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

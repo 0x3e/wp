@@ -11,10 +11,18 @@ Class Install Extends Registry
 {
   public function go()
   {
+    $tmp_output='app/up/';
+    if(!is_writable($tmp_output))
+    {
+      if(!file_exists("$tmp_output"))
+        mkdir($tmp_output);
+      chmod($tmp_output, 0777);
+    }
     $conf=Config::get_instance();
     $wp=$conf->get_wp();
 
     $latest=$this->get_latest_version_name($wp['url']);
+    $tmp_file=$tmp_output.$latest;
     if(!$latest)
       return;
     $c=new Kv('current_version');
@@ -29,9 +37,7 @@ Class Install Extends Registry
       echo "all new\n";
     }
     echo "downloading update\n";
-    $tmp_file='app/up/'.$latest;
     $this->download_wp($tmp_file,$wp['url']);
-    $tmp_output='app/up/';
     if($this->unpack_archive($tmp_file,$tmp_output))
     {
       $name=substr($latest,0,-7);
@@ -40,9 +46,12 @@ Class Install Extends Registry
         mkdir("app/vnd/wp/");
       rename($tmp_output."wordpress","app/vnd/wp/".$name);
       echo "\nrenamed ".$tmp_output."wordpress"." app/vnd/wp/".$name."\n";
-      symlink("app/theme/wp/0x3e","app/vnd/wp/".$name."/wp-content/theme/0x3e");
       symlink("app/vnd/wp/".$name,"tmp_wp_link");
       copy('app/cfg/wp-config.php','tmp_wp_link/wp-config.php');
+      $cwd=getcwd();
+      chdir('app/vnd/wp/'.$name.'/wp-content/themes/');
+      symlink('../../../../../thm/wp/0x3e','0x3e');
+      chdir($cwd);
       rename("tmp_wp_link","wp");
       echo "\nsymlinked app/vnd/wp".$name." wp\n";
       $c->set_v($latest);
