@@ -1,6 +1,8 @@
-diff -crB app/up/wordpress-3.2.1/index.php app/vnd/wp/wordpress-3.2.1/index.php
-*** app/up/wordpress-3.2.1/index.php	2008-05-26 06:33:13.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/index.php	2011-07-17 15:55:22.000000000 +1000
+Only in app/vnd/wp/wordpress-3.2.1: favicon.ico
+Only in app/vnd/wp/wordpress-3.2.1: .htaccess
+diff -crB app/up/wordpress/index.php app/vnd/wp/wordpress-3.2.1/index.php
+*** app/up/wordpress/index.php	2008-05-26 06:33:13.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/index.php	2011-07-18 21:12:17.144393697 +1000
 ***************
 *** 15,18 ****
   
@@ -13,9 +15,9 @@ diff -crB app/up/wordpress-3.2.1/index.php app/vnd/wp/wordpress-3.2.1/index.php
   /** Loads the WordPress Environment and Template */
   require('./wp-blog-header.php');
 ! ?>
-diff -crB app/up/wordpress-3.2.1/wp-blog-header.php app/vnd/wp/wordpress-3.2.1/wp-blog-header.php
-*** app/up/wordpress-3.2.1/wp-blog-header.php	2010-11-21 08:44:11.000000000 +1100
---- app/vnd/wp/wordpress-3.2.1/wp-blog-header.php	2011-07-17 15:55:22.000000000 +1000
+diff -crB app/up/wordpress/wp-blog-header.php app/vnd/wp/wordpress-3.2.1/wp-blog-header.php
+*** app/up/wordpress/wp-blog-header.php	2010-11-21 08:44:11.000000000 +1100
+--- app/vnd/wp/wordpress-3.2.1/wp-blog-header.php	2011-07-18 21:12:17.144393697 +1000
 ***************
 *** 17,20 ****
   
@@ -30,9 +32,128 @@ diff -crB app/up/wordpress-3.2.1/wp-blog-header.php app/vnd/wp/wordpress-3.2.1/w
 ! ?>
 Only in app/vnd/wp/wordpress-3.2.1: wp-config.php
 Only in app/vnd/wp/wordpress-3.2.1/wp-content/themes: 0x3e
-diff -crB app/up/wordpress-3.2.1/wp-includes/load.php app/vnd/wp/wordpress-3.2.1/wp-includes/load.php
-*** app/up/wordpress-3.2.1/wp-includes/load.php	2011-06-30 02:50:07.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/wp-includes/load.php	2011-07-17 15:55:22.000000000 +1000
+diff -crB app/up/wordpress/wp-includes/class-wp-error.php app/vnd/wp/wordpress-3.2.1/wp-includes/class-wp-error.php
+*** app/up/wordpress/wp-includes/class-wp-error.php	2011-04-30 06:05:12.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/class-wp-error.php	2011-07-18 21:55:18.973811587 +1000
+***************
+*** 1,4 ****
+--- 1,5 ----
+  <?php
++ Dev::log("info","wp-includes/class.wp-error.php");
+  /**
+   * WordPress Error API.
+   *
+***************
+*** 209,212 ****
+  	return false;
+  }
+  
+! ?>
+\ No newline at end of file
+--- 210,214 ----
+  	return false;
+  }
+  
+! Dev::log("info","wp-includes/class.wp-error.php fin");
+! ?>
+diff -crB app/up/wordpress/wp-includes/class-wp.php app/vnd/wp/wordpress-3.2.1/wp-includes/class-wp.php
+*** app/up/wordpress/wp-includes/class-wp.php	2011-06-09 02:07:38.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/class-wp.php	2011-07-18 21:53:36.232780510 +1000
+***************
+*** 1,4 ****
+--- 1,5 ----
+  <?php
++ Dev::log("info","wp-includes/class.wp.php");
+  /**
+   * WordPress environment setup class.
+   *
+***************
+*** 596,599 ****
+--- 597,601 ----
+  
+  }
+  
++ Dev::log("info","wp-includes/class.wp.php fin");
+  ?>
+diff -crB app/up/wordpress/wp-includes/compat.php app/vnd/wp/wordpress-3.2.1/wp-includes/compat.php
+*** app/up/wordpress/wp-includes/compat.php	2011-07-07 09:44:23.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/compat.php	2011-07-18 21:52:23.677054038 +1000
+***************
+*** 1,4 ****
+--- 1,5 ----
+  <?php
++ Dev::log("info","wp-includes/compat.php");
+  /**
+   * WordPress implementation for PHP functions either missing from older PHP versions or not included by default.
+   *
+***************
+*** 94,96 ****
+--- 95,98 ----
+  		return is_array($data) ? array_map(__FUNCTION__, $data) : $data;
+  	}
+  }
++ Dev::log("info","wp-includes/compat.php fin");
+diff -crB app/up/wordpress/wp-includes/default-constants.php app/vnd/wp/wordpress-3.2.1/wp-includes/default-constants.php
+*** app/up/wordpress/wp-includes/default-constants.php	2011-05-05 09:53:36.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/default-constants.php	2011-07-18 21:46:52.463756106 +1000
+***************
+*** 1,4 ****
+--- 1,5 ----
+  <?php
++ Dev::log("info","wp-includes/default-constants.php");
+  /**
+   * Defines constants and global variables that can be overridden, generally in wp-config.php.
+   *
+***************
+*** 13,18 ****
+--- 14,20 ----
+   * @since 3.0.0
+   */
+  function wp_initial_constants( ) {
++ Dev::log("info","wp_initial_constants");
+  	global $blog_id;
+  
+  	// set memory limits
+***************
+*** 68,73 ****
+--- 70,76 ----
+  
+  	if ( !defined('SHORTINIT') )
+  		define('SHORTINIT', false);
++ Dev::log("info","wp_initial_constants fin");
+  }
+  
+  /**
+***************
+*** 298,301 ****
+--- 301,305 ----
+  
+  }
+  
++ Dev::log("info","wp-includes/default-constants.php fin");
+  ?>
+diff -crB app/up/wordpress/wp-includes/functions.php app/vnd/wp/wordpress-3.2.1/wp-includes/functions.php
+*** app/up/wordpress/wp-includes/functions.php	2011-06-20 07:37:47.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/functions.php	2011-07-18 21:52:55.031367804 +1000
+***************
+*** 1,4 ****
+--- 1,5 ----
+  <?php
++ Dev::log("info","wp-includes/functions.php");
+  /**
+   * Main WordPress API
+   *
+***************
+*** 4549,4552 ****
+--- 4550,4554 ----
+  	@header( 'X-Frame-Options: SAMEORIGIN' );
+  }
+  
++ Dev::log("info","wp-includes/functions.php fin");
+  ?>
+diff -crB app/up/wordpress/wp-includes/load.php app/vnd/wp/wordpress-3.2.1/wp-includes/load.php
+*** app/up/wordpress/wp-includes/load.php	2011-06-30 02:50:07.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/load.php	2011-07-18 22:00:09.939746174 +1000
 ***************
 *** 1,4 ****
 --- 1,5 ----
@@ -41,9 +162,227 @@ diff -crB app/up/wordpress-3.2.1/wp-includes/load.php app/vnd/wp/wordpress-3.2.1
   /**
    * These functions are needed to load WordPress.
    *
-diff -crB app/up/wordpress-3.2.1/wp-includes/template-loader.php app/vnd/wp/wordpress-3.2.1/wp-includes/template-loader.php
-*** app/up/wordpress-3.2.1/wp-includes/template-loader.php	2010-04-28 17:48:09.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/wp-includes/template-loader.php	2011-07-17 15:55:22.000000000 +1000
+***************
+*** 15,20 ****
+--- 16,22 ----
+   * @return null Will return null if register_globals PHP directive was disabled
+   */
+  function wp_unregister_GLOBALS() {
++ Dev::log("info","wp_unregister_GLOBALS");
+  	if ( !ini_get( 'register_globals' ) )
+  		return;
+  
+***************
+*** 30,35 ****
+--- 32,38 ----
+  			$GLOBALS[$k] = null;
+  			unset( $GLOBALS[$k] );
+  		}
++ Dev::log("info","wp_unregister_GLOBALS fin");
+  }
+  
+  /**
+***************
+*** 39,44 ****
+--- 42,48 ----
+   * @since 3.0.0
+   */
+  function wp_fix_server_vars() {
++ Dev::log("info","wp_fix_server_vars");
+  	global $PHP_SELF;
+  
+  	$default_server_values = array(
+***************
+*** 90,95 ****
+--- 94,100 ----
+  	$PHP_SELF = $_SERVER['PHP_SELF'];
+  	if ( empty( $PHP_SELF ) )
+  		$_SERVER['PHP_SELF'] = $PHP_SELF = preg_replace( '/(\?.*)?$/', '', $_SERVER["REQUEST_URI"] );
++ Dev::log("info","wp_fix_server_vars fin");
+  }
+  
+  /**
+***************
+*** 104,109 ****
+--- 109,115 ----
+   * @since 3.0.0
+   */
+  function wp_check_php_mysql_versions() {
++ Dev::log("info","wp_check_php_mysql_versions");
+  	// we can probably extend this function to check if wp_die() exists then use translated strings, and then use it in install.php etc.
+  
+  	global $required_php_version, $wp_version;
+***************
+*** 113,118 ****
+--- 119,125 ----
+  
+  	if ( !extension_loaded( 'mysql' ) && !file_exists( WP_CONTENT_DIR . '/db.php' ) )
+  		die( /*WP_I18N_OLD_MYSQL*/'Your PHP installation appears to be missing the MySQL extension which is required by WordPress.'/*/WP_I18N_OLD_MYSQL*/ );
++ Dev::log("info","wp_check_php_mysql_versions fin");
+  }
+  
+  /**
+***************
+*** 122,132 ****
+--- 129,141 ----
+   * @since 3.0.0
+   */
+  function wp_favicon_request() {
++ Dev::log("info","wp_favicon_request");
+  	if ( '/favicon.ico' == $_SERVER['REQUEST_URI'] ) {
+  		header('Content-Type: image/vnd.microsoft.icon');
+  		header('Content-Length: 0');
+  		exit;
+  	}
++ Dev::log("info","wp_favicon_request fin");
+  }
+  
+  /**
+***************
+*** 144,149 ****
+--- 153,159 ----
+   * @since 3.0.0
+   */
+  function wp_maintenance() {
++ Dev::log("info","wp_maintenance");
+  	if ( !file_exists( ABSPATH . '.maintenance' ) || defined( 'WP_INSTALLING' ) )
+  		return;
+  
+***************
+*** 179,184 ****
+--- 189,195 ----
+  	</html>
+  <?php
+  	die();
++ Dev::log("info","wp_maintenance fin");
+  }
+  
+  /**
+***************
+*** 190,199 ****
+--- 201,212 ----
+   * @return bool Always returns true.
+   */
+  function timer_start() {
++ Dev::log("info","timer_start");
+  	global $timestart;
+  	$mtime = explode( ' ', microtime() );
+  	$timestart = $mtime[1] + $mtime[0];
+  	return true;
++ Dev::log("info","timer_start fin");
+  }
+  
+  /**
+***************
+*** 260,265 ****
+--- 273,279 ----
+   * @since 3.0.0
+   */
+  function wp_debug_mode() {
++ Dev::log("info","wp_debug_mode");
+  	if ( WP_DEBUG ) {
+  		// E_DEPRECATED is a core PHP constant in PHP 5.3. Don't define this yourself.
+  		// The two statements are equivalent, just one is for 5.3+ and for less than 5.3.
+***************
+*** 278,283 ****
+--- 292,298 ----
+  	} else {
+  		error_reporting( E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_ERROR | E_WARNING | E_PARSE | E_USER_ERROR | E_USER_WARNING | E_RECOVERABLE_ERROR );
+  	}
++ Dev::log("info","wp_debug_mode fin");
+  }
+  
+  /**
+***************
+*** 324,329 ****
+--- 339,345 ----
+   * @global $wpdb WordPress Database Object
+   */
+  function require_wp_db() {
++ Dev::log("info","require_wp_db");
+  	global $wpdb;
+  
+  	require_once( ABSPATH . WPINC . '/wp-db.php' );
+***************
+*** 334,339 ****
+--- 350,356 ----
+  		return;
+  
+  	$wpdb = new wpdb( DB_USER, DB_PASSWORD, DB_NAME, DB_HOST );
++ Dev::log("info","require_wp_db fin");
+  }
+  
+  /**
+***************
+*** 351,356 ****
+--- 368,374 ----
+   * @since 3.0.0
+   */
+  function wp_set_wpdb_vars() {
++   Dev::log("info","wp_set_wpdb_vars");
+  	global $wpdb, $table_prefix;
+  	if ( !empty( $wpdb->error ) )
+  		dead_db();
+***************
+*** 367,372 ****
+--- 385,391 ----
+  
+  	if ( is_wp_error( $prefix ) )
+  		wp_die( /*WP_I18N_BAD_PREFIX*/'<strong>ERROR</strong>: <code>$table_prefix</code> in <code>wp-config.php</code> can only contain numbers, letters, and underscores.'/*/WP_I18N_BAD_PREFIX*/ );
++   Dev::log("info","wp_set_wpdb_vars fin");
+  }
+  
+  /**
+***************
+*** 379,384 ****
+--- 398,404 ----
+   * @since 3.0.0
+   */
+  function wp_start_object_cache() {
++   Dev::log("info","wp_start_object_cache");
+  	global $_wp_using_ext_object_cache;
+  
+  	$first_init = false;
+***************
+*** 410,415 ****
+--- 430,436 ----
+  		wp_cache_add_global_groups( array( 'users', 'userlogins', 'usermeta', 'user_meta', 'site-transient', 'site-options', 'site-lookup', 'blog-lookup', 'blog-details', 'rss', 'global-posts' ) );
+  		wp_cache_add_non_persistent_groups( array( 'comment', 'counts', 'plugins' ) );
+  	}
++   Dev::log("info","wp_start_object_cache fin");
+  }
+  
+  /**
+***************
+*** 651,654 ****
+--- 672,676 ----
+  	return false;
+  }
+  
++ Dev::log("info","wp-includes/load.php fin");
+  ?>
+diff -crB app/up/wordpress/wp-includes/plugin.php app/vnd/wp/wordpress-3.2.1/wp-includes/plugin.php
+*** app/up/wordpress/wp-includes/plugin.php	2011-04-15 04:05:30.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/plugin.php	2011-07-18 21:56:25.427479950 +1000
+***************
+*** 1,4 ****
+--- 1,5 ----
+  <?php
++ Dev::log("info","wp-includes/plugin.php");
+  /**
+   * The plugin API is located in this file, which allows for creating actions
+   * and filters and hooking functions, and methods. The functions or methods will
+***************
+*** 785,788 ****
+--- 786,790 ----
+  	}
+  }
+  
++ Dev::log("info","wp-includes/plugin.php fin");
+  ?>
+diff -crB app/up/wordpress/wp-includes/template-loader.php app/vnd/wp/wordpress-3.2.1/wp-includes/template-loader.php
+*** app/up/wordpress/wp-includes/template-loader.php	2010-04-28 17:48:09.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/template-loader.php	2011-07-18 21:12:17.148393741 +1000
 ***************
 *** 1,4 ****
 --- 1,5 ----
@@ -86,9 +425,50 @@ diff -crB app/up/wordpress-3.2.1/wp-includes/template-loader.php app/vnd/wp/word
   	return;
   endif;
   
-diff -crB app/up/wordpress-3.2.1/wp-load.php app/vnd/wp/wordpress-3.2.1/wp-load.php
-*** app/up/wordpress-3.2.1/wp-load.php	2011-06-30 02:50:07.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/wp-load.php	2011-07-17 15:55:22.000000000 +1000
+diff -crB app/up/wordpress/wp-includes/version.php app/vnd/wp/wordpress-3.2.1/wp-includes/version.php
+*** app/up/wordpress/wp-includes/version.php	2011-07-13 04:24:35.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/version.php	2011-07-18 21:45:45.394092099 +1000
+***************
+*** 1,4 ****
+--- 1,5 ----
+  <?php
++ Dev::log("info","wp-includes/version.php");
+  /**
+   * The WordPress version string
+   *
+***************
+*** 40,42 ****
+--- 41,44 ----
+   * @global string $required_mysql_version
+   */
+  $required_mysql_version = '5.0';
++ Dev::log("info","wp-includes/version.php fin");
+diff -crB app/up/wordpress/wp-includes/wp-db.php app/vnd/wp/wordpress-3.2.1/wp-includes/wp-db.php
+*** app/up/wordpress/wp-includes/wp-db.php	2011-06-28 06:47:04.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/wp-db.php	2011-07-18 21:58:45.635893755 +1000
+***************
+*** 476,481 ****
+--- 476,482 ----
+  	 * @param string $dbhost MySQL database host
+  	 */
+  	function __construct( $dbuser, $dbpassword, $dbname, $dbhost ) {
++   Dev::log("info","wpdb constructor");
+  		register_shutdown_function( array( &$this, '__destruct' ) );
+  
+  		if ( WP_DEBUG )
+***************
+*** 489,494 ****
+--- 490,496 ----
+  		$this->dbhost = $dbhost;
+  
+  		$this->db_connect();
++   Dev::log("info","wpdb constructor fin");
+  	}
+  
+  	/**
+diff -crB app/up/wordpress/wp-load.php app/vnd/wp/wordpress-3.2.1/wp-load.php
+*** app/up/wordpress/wp-load.php	2011-06-30 02:50:07.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-load.php	2011-07-18 21:12:17.149393752 +1000
 ***************
 *** 1,4 ****
 --- 1,7 ----
@@ -111,9 +491,9 @@ diff -crB app/up/wordpress-3.2.1/wp-load.php app/vnd/wp/wordpress-3.2.1/wp-load.
   }
   
 ! ?>
-diff -crB app/up/wordpress-3.2.1/wp-settings.php app/vnd/wp/wordpress-3.2.1/wp-settings.php
-*** app/up/wordpress-3.2.1/wp-settings.php	2011-06-30 02:50:07.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/wp-settings.php	2011-07-17 15:55:22.000000000 +1000
+diff -crB app/up/wordpress/wp-settings.php app/vnd/wp/wordpress-3.2.1/wp-settings.php
+*** app/up/wordpress/wp-settings.php	2011-06-30 02:50:07.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-settings.php	2011-07-18 23:54:21.933088714 +1000
 ***************
 *** 1,4 ****
 --- 1,5 ----

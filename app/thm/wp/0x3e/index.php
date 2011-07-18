@@ -9,8 +9,8 @@ while(have_posts())
   //Dev::log_print("post",$GLOBALS['post']);
   Dev::log("info","post $i");
 ?>
-<h2><?php the_title();?></h2>
-<?php the_content();?>
+<article><header><h1><?php the_title();?></h1></header><?php the_content();?>
+</article>
 <?php
 }
 get_footer();
