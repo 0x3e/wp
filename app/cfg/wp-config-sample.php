@@ -1,4 +1,10 @@
 <?php
+if(!class_exists('Dev'))
+{
+  include(dirname(__File__).'/../../../init.php');
+  \App\Init::wp();
+}
+Dev::log("info","wp-config.php");
 /**
  * The base configurations of the WordPress.
  *

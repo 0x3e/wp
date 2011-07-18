@@ -48,6 +48,8 @@ Class Install Extends Registry
       echo "\nrenamed ".$tmp_output."wordpress"." app/vnd/wp/".$name."\n";
       symlink("app/vnd/wp/".$name,"tmp_wp_link");
       copy('app/cfg/wp-config.php','tmp_wp_link/wp-config.php');
+      copy('app/thm/wp/0x3e/.htaccess','tmp_wp_link/.htaccess');
+      copy('app/thm/wp/0x3e/favicon.ico','tmp_wp_link/favicon.ico');
       $cwd=getcwd();
       chdir('app/vnd/wp/'.$name.'/wp-content/themes/');
       symlink('../../../../../thm/wp/0x3e','0x3e');
