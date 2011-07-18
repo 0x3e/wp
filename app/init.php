@@ -30,7 +30,7 @@ Class Init
     ini_set('error_log',dirname(__File__).'/log/error.log');
     define('DEV', 'true');
     define('DEV_LOG', dirname(__File__).'/log/dev.log');
-    ini_set('display_errors',1);
+    ini_set('display_errors',0);
     chdir($cwd);
     Dev::log("info","\n\n\n".'\App\Init::wp complete');
   }
