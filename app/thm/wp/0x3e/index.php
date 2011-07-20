@@ -1,6 +1,12 @@
 <?php 
 Dev::log("info","theme index.php");
 get_header();
+?><header>
+  <hgroup>
+  <h1>0x3e</h1>
+  <h2>00111110</h2>
+  </hgroup>
+</header><?php
 $i=0;
 while(have_posts())
 { 

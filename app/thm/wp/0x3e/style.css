@@ -1,5 +1,4 @@
-/*
-Theme Name: 0x3e
+me: 0x3e
 Theme URI: http://wordpress.org/extend/themes/twentyeleven
 Theme URI: http://0x3e.com/theme
 Author: 0x3e
@@ -10,3 +9,63 @@ License: none
 License URI: none
 Tags: 0x3e
 -------------------------------------------------------------- */
+html
+{
+}
+body
+{
+  font-family: arial;
+  margin: 3em auto;
+  color: #eee;
+  background-color: #999;
+  font-size: 0.8em;
+   width: 51em;
+}
+
+body>header
+{
+
+}
+
+body>header h1
+{
+
+  padding: 0.6em 0 0 0;
+  margin: 0;
+  font-size: 8em;
+  line-height: 0.8em;
+}
+
+body>header h2
+{
+  padding: 0;
+  margin: 0 0 2em;
+  font-size: 0.7em;
+}
+body>header, article, footer
+{
+  padding: 0.1em 4em 0.1em;
+  margin: 0;
+  display: block;
+  background-color: #333;
+}
+article > h1
+{
+  margin: 0;
+  padding: 0;
+}
+code
+{
+  background-color: black;
+  color: white;
+  font-family: profont, monospace;
+  display: block;
+  padding: 0em 2em 2em;
+  margin: 1em;
+  width: 37em;
+}
+footer
+{
+  height: 3em;
+}
+
