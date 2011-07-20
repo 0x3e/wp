@@ -24,3 +24,4 @@ Class Init
     $manifest = \sfYaml::load('manifest.yml');
   }
 }
+

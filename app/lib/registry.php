@@ -24,3 +24,4 @@ Abstract class Registry
   }
 
 }
+

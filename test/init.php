@@ -17,3 +17,4 @@ Class Init
     spl_autoload_register("Autoloader::load");
   }
 }
+
