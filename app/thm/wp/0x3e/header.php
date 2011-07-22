@@ -19,3 +19,9 @@ Dev::log("info","theme header.php");
 <?php	wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<header>
+  <hgroup>
+  <h1>0x3E</h1>
+  <h2>00111110111101000111010101001010010010100101000101001010100100011010010100010100</h2>
+  </hgroup>
+</header>

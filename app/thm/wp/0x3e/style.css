@@ -1,71 +1,108 @@
-me: 0x3e
-Theme URI: http://wordpress.org/extend/themes/twentyeleven
-Theme URI: http://0x3e.com/theme
-Author: 0x3e
-Author URI: http://0x3e.com/
-Description: 0x3e theme
-Version: 0.1
-License: none
-License URI: none
-Tags: 0x3e
--------------------------------------------------------------- */
+/*
+ * Theme Name: 0x3e
+ * Theme URI: http://wordpress.org/extend/themes/twentyeleven
+ * Theme URI: http://0x3e.com/theme
+ * Author: 0x3e
+ * Author URI: http://0x3e.com/
+ * Description: 0x3e theme
+ * Version: 0.1
+ * License: none
+ * License URI: none
+ * Tags: 0x3e
+ * -------------------------------------------------------------- */
+@font-face {
+  font-family: 'ProFontWindowsRegular';
+  src: url('/wp-content/themes/0x3e/ProFont/ProFontWindows-webfont.eot');
+  src: url('/wp-content/themes/0x3e/ProFont/ProFontWindows-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/wp-content/themes/0x3e/ProFont/ProFontWindows-webfont.woff') format('woff'),
+       url('/wp-content/themes/0x3e/ProFont/ProFontWindows-webfont.ttf') format('truetype'),
+       url('/wp-content/themes/0x3e/ProFont/ProFontWindows-webfont.svg#ProFontWindowsRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 html
 {
 }
 body
 {
   font-family: arial;
-  margin: 3em auto;
+  margin: 32px auto;
   color: #eee;
-  background-color: #999;
-  font-size: 0.8em;
-   width: 51em;
+  background-color: #111;
+  font-size: 14px;
+  width: 820px;
 }
-
 body>header
 {
 
 }
-
 body>header h1
 {
-
-  padding: 0.6em 0 0 0;
-  margin: 0;
-  font-size: 8em;
-  line-height: 0.8em;
+  font: 118px/56px "ProFontWindowsRegular", monospace;
+  margin: 28px 0 0 0;
+  padding: 62px 56px 0;
+  display: block;
+  background-color: #000;
 }
-
 body>header h2
 {
-  padding: 0;
-  margin: 0 0 2em;
-  font-size: 0.7em;
+  font: 11px/16px "ProFontWindowsRegular", monospace;
+  padding: 0 56px 52px;
+  margin: 0 0;
+  display: block;
+  background-color: #000;
 }
 body>header, article, footer
 {
-  padding: 0.1em 4em 0.1em;
+  padding: 4px 32px 4px;
   margin: 0;
   display: block;
-  background-color: #333;
+  background-color: #222;
 }
-article > h1
+article
+{
+  padding: 24px 62px 4px;
+}
+article > header > h1
+{
+  font: 36px/32px "ProFontWindowsRegular", monospace;
+  margin: 26px 0px 0;
+  padding: 24px 24px 0;
+}
+article > p
 {
   margin: 0;
-  padding: 0;
+  padding: 14px 24px 24px 24px;
+}
+article > p, article > header > h1
+{
+  background-color: #121212;
 }
 code
 {
   background-color: black;
   color: white;
-  font-family: profont, monospace;
+  font: 13px/13px "ProFontWindowsRegular", monospace;
   display: block;
-  padding: 0em 2em 2em;
-  margin: 1em;
-  width: 37em;
+  padding: 4px 26px 13px;
+  margin: 13px;
 }
-footer
+footer > p
 {
-  height: 3em;
+  margin: 56px 0 28px 0;
+  padding: 62px 56px 0;
+  display: block;
+  background-color: #000;
 }
+.Comment { color: #000080; }
+.Constant { color: #a00000; }
+.Statement { color: #a05500; }
+.Identifier { color: #008080; }
+.PreProc { color: #800080; }
+.Special { color: #800080; }
+.Type { color: #008000; }
+.lnr { color: #aa5500; }
+
+
+
 
