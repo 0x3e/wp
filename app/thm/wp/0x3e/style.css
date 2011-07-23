@@ -29,24 +29,24 @@ body
   margin: 32px auto;
   color: #eee;
   background-color: #111;
-  font-size: 14px;
-  width: 820px;
+  font-size: 16px;
+  width: 896px;
 }
 body>header
 {
-
+  padding: 32px;
 }
 body>header h1
 {
-  font: 118px/56px "ProFontWindowsRegular", monospace;
-  margin: 28px 0 0 0;
+  font: 128px/64px "ProFontWindowsRegular", monospace;
+  margin: 0;
   padding: 62px 56px 0;
   display: block;
   background-color: #000;
 }
 body>header h2
 {
-  font: 11px/16px "ProFontWindowsRegular", monospace;
+  font: 14px/16px "ProFontWindowsRegular", monospace;
   padding: 0 56px 52px;
   margin: 0 0;
   display: block;
@@ -54,19 +54,18 @@ body>header h2
 }
 body>header, article, footer
 {
-  padding: 4px 32px 4px;
   margin: 0;
   display: block;
   background-color: #222;
 }
 article
 {
-  padding: 24px 62px 4px;
+  padding: 16px 62px 16px;
 }
 article > header > h1
 {
   font: 36px/32px "ProFontWindowsRegular", monospace;
-  margin: 26px 0px 0;
+  margin: 0;
   padding: 24px 24px 0;
 }
 article > p
@@ -82,14 +81,18 @@ code
 {
   background-color: black;
   color: white;
-  font: 13px/13px "ProFontWindowsRegular", monospace;
+  font: 16px/16px "ProFontWindowsRegular", monospace;
   display: block;
-  padding: 4px 26px 13px;
-  margin: 13px;
+  padding: 0px 16px 16px;
+  margin: 16px;
+}
+footer
+{
+  padding: 32px;
 }
 footer > p
 {
-  margin: 56px 0 28px 0;
+  margin: 0;
   padding: 62px 56px 0;
   display: block;
   background-color: #000;
@@ -102,7 +105,6 @@ footer > p
 .Special { color: #800080; }
 .Type { color: #008000; }
 .lnr { color: #aa5500; }
-
 
 
 
