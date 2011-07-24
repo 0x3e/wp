@@ -1,8 +1,8 @@
 Only in app/vnd/wp/wordpress-3.2.1: favicon.ico
 Only in app/vnd/wp/wordpress-3.2.1: .htaccess
-diff -crB app/up/wordpress/index.php app/vnd/wp/wordpress-3.2.1/index.php
-*** app/up/wordpress/index.php	2008-05-26 06:33:13.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/index.php	2011-07-18 21:12:17.144393697 +1000
+diff -crB app/up/wordpress-3.2.1/index.php app/vnd/wp/wordpress-3.2.1/index.php
+*** app/up/wordpress-3.2.1/index.php	2008-05-26 06:33:13.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/index.php	2011-07-24 10:35:23.000000000 +1000
 ***************
 *** 15,18 ****
   
@@ -15,9 +15,40 @@ diff -crB app/up/wordpress/index.php app/vnd/wp/wordpress-3.2.1/index.php
   /** Loads the WordPress Environment and Template */
   require('./wp-blog-header.php');
 ! ?>
-diff -crB app/up/wordpress/wp-blog-header.php app/vnd/wp/wordpress-3.2.1/wp-blog-header.php
-*** app/up/wordpress/wp-blog-header.php	2010-11-21 08:44:11.000000000 +1100
---- app/vnd/wp/wordpress-3.2.1/wp-blog-header.php	2011-07-18 21:12:17.144393697 +1000
+diff -crB app/up/wordpress-3.2.1/wp-admin/load-scripts.php app/vnd/wp/wordpress-3.2.1/wp-admin/load-scripts.php
+*** app/up/wordpress-3.2.1/wp-admin/load-scripts.php	2011-04-12 04:55:11.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-admin/load-scripts.php	2011-07-24 11:17:15.000000000 +1000
+***************
+*** 6,11 ****
+--- 6,14 ----
+   * Set this to error_reporting( E_ALL ) or error_reporting( E_ALL | E_STRICT ) for debugging
+   */
+  error_reporting(0);
++ include(dirname(__File__).'/../../../../init.php');
++ \App\Init::wp();
++ Dev::log("info","load-styles.php");
+  
+  /** Set ABSPATH for execution */
+  define( 'ABSPATH', dirname(dirname(__FILE__)) . '/' );
+diff -crB app/up/wordpress-3.2.1/wp-admin/load-styles.php app/vnd/wp/wordpress-3.2.1/wp-admin/load-styles.php
+*** app/up/wordpress-3.2.1/wp-admin/load-styles.php	2011-04-12 04:55:11.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-admin/load-styles.php	2011-07-24 11:16:55.000000000 +1000
+***************
+*** 7,12 ****
+--- 7,16 ----
+   */
+  error_reporting(0);
+  
++ include(dirname(__File__).'/../../../../init.php');
++ \App\Init::wp();
++ Dev::log("info","load-styles.php");
++ 
+  /** Set ABSPATH for execution */
+  define( 'ABSPATH', dirname(dirname(__FILE__)) . '/' );
+  define( 'WPINC', 'wp-includes' );
+diff -crB app/up/wordpress-3.2.1/wp-blog-header.php app/vnd/wp/wordpress-3.2.1/wp-blog-header.php
+*** app/up/wordpress-3.2.1/wp-blog-header.php	2010-11-21 08:44:11.000000000 +1100
+--- app/vnd/wp/wordpress-3.2.1/wp-blog-header.php	2011-07-24 10:35:23.000000000 +1000
 ***************
 *** 17,20 ****
   
@@ -32,9 +63,9 @@ diff -crB app/up/wordpress/wp-blog-header.php app/vnd/wp/wordpress-3.2.1/wp-blog
 ! ?>
 Only in app/vnd/wp/wordpress-3.2.1: wp-config.php
 Only in app/vnd/wp/wordpress-3.2.1/wp-content/themes: 0x3e
-diff -crB app/up/wordpress/wp-includes/class-wp-error.php app/vnd/wp/wordpress-3.2.1/wp-includes/class-wp-error.php
-*** app/up/wordpress/wp-includes/class-wp-error.php	2011-04-30 06:05:12.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/wp-includes/class-wp-error.php	2011-07-18 21:55:18.973811587 +1000
+diff -crB app/up/wordpress-3.2.1/wp-includes/class-wp-error.php app/vnd/wp/wordpress-3.2.1/wp-includes/class-wp-error.php
+*** app/up/wordpress-3.2.1/wp-includes/class-wp-error.php	2011-04-30 06:05:12.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/class-wp-error.php	2011-07-24 10:35:23.000000000 +1000
 ***************
 *** 1,4 ****
 --- 1,5 ----
@@ -56,9 +87,9 @@ diff -crB app/up/wordpress/wp-includes/class-wp-error.php app/vnd/wp/wordpress-3
   
 ! Dev::log("info","wp-includes/class.wp-error.php fin");
 ! ?>
-diff -crB app/up/wordpress/wp-includes/class-wp.php app/vnd/wp/wordpress-3.2.1/wp-includes/class-wp.php
-*** app/up/wordpress/wp-includes/class-wp.php	2011-06-09 02:07:38.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/wp-includes/class-wp.php	2011-07-18 21:53:36.232780510 +1000
+diff -crB app/up/wordpress-3.2.1/wp-includes/class-wp.php app/vnd/wp/wordpress-3.2.1/wp-includes/class-wp.php
+*** app/up/wordpress-3.2.1/wp-includes/class-wp.php	2011-06-09 02:07:38.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/class-wp.php	2011-07-24 10:35:23.000000000 +1000
 ***************
 *** 1,4 ****
 --- 1,5 ----
@@ -75,9 +106,9 @@ diff -crB app/up/wordpress/wp-includes/class-wp.php app/vnd/wp/wordpress-3.2.1/w
   
 + Dev::log("info","wp-includes/class.wp.php fin");
   ?>
-diff -crB app/up/wordpress/wp-includes/compat.php app/vnd/wp/wordpress-3.2.1/wp-includes/compat.php
-*** app/up/wordpress/wp-includes/compat.php	2011-07-07 09:44:23.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/wp-includes/compat.php	2011-07-18 21:52:23.677054038 +1000
+diff -crB app/up/wordpress-3.2.1/wp-includes/compat.php app/vnd/wp/wordpress-3.2.1/wp-includes/compat.php
+*** app/up/wordpress-3.2.1/wp-includes/compat.php	2011-07-07 09:44:23.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/compat.php	2011-07-24 10:35:23.000000000 +1000
 ***************
 *** 1,4 ****
 --- 1,5 ----
@@ -93,9 +124,9 @@ diff -crB app/up/wordpress/wp-includes/compat.php app/vnd/wp/wordpress-3.2.1/wp-
   	}
   }
 + Dev::log("info","wp-includes/compat.php fin");
-diff -crB app/up/wordpress/wp-includes/default-constants.php app/vnd/wp/wordpress-3.2.1/wp-includes/default-constants.php
-*** app/up/wordpress/wp-includes/default-constants.php	2011-05-05 09:53:36.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/wp-includes/default-constants.php	2011-07-18 21:46:52.463756106 +1000
+diff -crB app/up/wordpress-3.2.1/wp-includes/default-constants.php app/vnd/wp/wordpress-3.2.1/wp-includes/default-constants.php
+*** app/up/wordpress-3.2.1/wp-includes/default-constants.php	2011-05-05 09:53:36.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/default-constants.php	2011-07-24 10:35:23.000000000 +1000
 ***************
 *** 1,4 ****
 --- 1,5 ----
@@ -132,9 +163,9 @@ diff -crB app/up/wordpress/wp-includes/default-constants.php app/vnd/wp/wordpres
   
 + Dev::log("info","wp-includes/default-constants.php fin");
   ?>
-diff -crB app/up/wordpress/wp-includes/functions.php app/vnd/wp/wordpress-3.2.1/wp-includes/functions.php
-*** app/up/wordpress/wp-includes/functions.php	2011-06-20 07:37:47.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/wp-includes/functions.php	2011-07-18 21:52:55.031367804 +1000
+diff -crB app/up/wordpress-3.2.1/wp-includes/functions.php app/vnd/wp/wordpress-3.2.1/wp-includes/functions.php
+*** app/up/wordpress-3.2.1/wp-includes/functions.php	2011-06-20 07:37:47.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/functions.php	2011-07-24 10:35:23.000000000 +1000
 ***************
 *** 1,4 ****
 --- 1,5 ----
@@ -151,9 +182,9 @@ diff -crB app/up/wordpress/wp-includes/functions.php app/vnd/wp/wordpress-3.2.1/
   
 + Dev::log("info","wp-includes/functions.php fin");
   ?>
-diff -crB app/up/wordpress/wp-includes/load.php app/vnd/wp/wordpress-3.2.1/wp-includes/load.php
-*** app/up/wordpress/wp-includes/load.php	2011-06-30 02:50:07.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/wp-includes/load.php	2011-07-18 22:00:09.939746174 +1000
+diff -crB app/up/wordpress-3.2.1/wp-includes/load.php app/vnd/wp/wordpress-3.2.1/wp-includes/load.php
+*** app/up/wordpress-3.2.1/wp-includes/load.php	2011-06-30 02:50:07.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/load.php	2011-07-24 10:35:23.000000000 +1000
 ***************
 *** 1,4 ****
 --- 1,5 ----
@@ -361,9 +392,9 @@ diff -crB app/up/wordpress/wp-includes/load.php app/vnd/wp/wordpress-3.2.1/wp-in
   
 + Dev::log("info","wp-includes/load.php fin");
   ?>
-diff -crB app/up/wordpress/wp-includes/plugin.php app/vnd/wp/wordpress-3.2.1/wp-includes/plugin.php
-*** app/up/wordpress/wp-includes/plugin.php	2011-04-15 04:05:30.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/wp-includes/plugin.php	2011-07-18 21:56:25.427479950 +1000
+diff -crB app/up/wordpress-3.2.1/wp-includes/plugin.php app/vnd/wp/wordpress-3.2.1/wp-includes/plugin.php
+*** app/up/wordpress-3.2.1/wp-includes/plugin.php	2011-04-15 04:05:30.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/plugin.php	2011-07-24 10:35:23.000000000 +1000
 ***************
 *** 1,4 ****
 --- 1,5 ----
@@ -380,9 +411,9 @@ diff -crB app/up/wordpress/wp-includes/plugin.php app/vnd/wp/wordpress-3.2.1/wp-
   
 + Dev::log("info","wp-includes/plugin.php fin");
   ?>
-diff -crB app/up/wordpress/wp-includes/template-loader.php app/vnd/wp/wordpress-3.2.1/wp-includes/template-loader.php
-*** app/up/wordpress/wp-includes/template-loader.php	2010-04-28 17:48:09.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/wp-includes/template-loader.php	2011-07-18 21:12:17.148393741 +1000
+diff -crB app/up/wordpress-3.2.1/wp-includes/template-loader.php app/vnd/wp/wordpress-3.2.1/wp-includes/template-loader.php
+*** app/up/wordpress-3.2.1/wp-includes/template-loader.php	2010-04-28 17:48:09.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/template-loader.php	2011-07-24 10:35:23.000000000 +1000
 ***************
 *** 1,4 ****
 --- 1,5 ----
@@ -425,9 +456,9 @@ diff -crB app/up/wordpress/wp-includes/template-loader.php app/vnd/wp/wordpress-
   	return;
   endif;
   
-diff -crB app/up/wordpress/wp-includes/version.php app/vnd/wp/wordpress-3.2.1/wp-includes/version.php
-*** app/up/wordpress/wp-includes/version.php	2011-07-13 04:24:35.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/wp-includes/version.php	2011-07-18 21:45:45.394092099 +1000
+diff -crB app/up/wordpress-3.2.1/wp-includes/version.php app/vnd/wp/wordpress-3.2.1/wp-includes/version.php
+*** app/up/wordpress-3.2.1/wp-includes/version.php	2011-07-13 04:24:35.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/version.php	2011-07-24 10:35:23.000000000 +1000
 ***************
 *** 1,4 ****
 --- 1,5 ----
@@ -443,9 +474,9 @@ diff -crB app/up/wordpress/wp-includes/version.php app/vnd/wp/wordpress-3.2.1/wp
    */
   $required_mysql_version = '5.0';
 + Dev::log("info","wp-includes/version.php fin");
-diff -crB app/up/wordpress/wp-includes/wp-db.php app/vnd/wp/wordpress-3.2.1/wp-includes/wp-db.php
-*** app/up/wordpress/wp-includes/wp-db.php	2011-06-28 06:47:04.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/wp-includes/wp-db.php	2011-07-18 21:58:45.635893755 +1000
+diff -crB app/up/wordpress-3.2.1/wp-includes/wp-db.php app/vnd/wp/wordpress-3.2.1/wp-includes/wp-db.php
+*** app/up/wordpress-3.2.1/wp-includes/wp-db.php	2011-06-28 06:47:04.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-includes/wp-db.php	2011-07-24 10:35:23.000000000 +1000
 ***************
 *** 476,481 ****
 --- 476,482 ----
@@ -466,9 +497,9 @@ diff -crB app/up/wordpress/wp-includes/wp-db.php app/vnd/wp/wordpress-3.2.1/wp-i
   	}
   
   	/**
-diff -crB app/up/wordpress/wp-load.php app/vnd/wp/wordpress-3.2.1/wp-load.php
-*** app/up/wordpress/wp-load.php	2011-06-30 02:50:07.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/wp-load.php	2011-07-18 21:12:17.149393752 +1000
+diff -crB app/up/wordpress-3.2.1/wp-load.php app/vnd/wp/wordpress-3.2.1/wp-load.php
+*** app/up/wordpress-3.2.1/wp-load.php	2011-06-30 02:50:07.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-load.php	2011-07-24 10:35:23.000000000 +1000
 ***************
 *** 1,4 ****
 --- 1,7 ----
@@ -491,9 +522,9 @@ diff -crB app/up/wordpress/wp-load.php app/vnd/wp/wordpress-3.2.1/wp-load.php
   }
   
 ! ?>
-diff -crB app/up/wordpress/wp-settings.php app/vnd/wp/wordpress-3.2.1/wp-settings.php
-*** app/up/wordpress/wp-settings.php	2011-06-30 02:50:07.000000000 +1000
---- app/vnd/wp/wordpress-3.2.1/wp-settings.php	2011-07-18 23:54:21.933088714 +1000
+diff -crB app/up/wordpress-3.2.1/wp-settings.php app/vnd/wp/wordpress-3.2.1/wp-settings.php
+*** app/up/wordpress-3.2.1/wp-settings.php	2011-06-30 02:50:07.000000000 +1000
+--- app/vnd/wp/wordpress-3.2.1/wp-settings.php	2011-07-24 10:35:23.000000000 +1000
 ***************
 *** 1,4 ****
 --- 1,5 ----
