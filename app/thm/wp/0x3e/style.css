@@ -40,14 +40,14 @@ body>header h1
 {
   font: 128px/64px "ProFontWindowsRegular", monospace;
   margin: 0;
-  padding: 62px 56px 0;
+  padding: 64px 64px 0;
   display: block;
   background-color: #000;
 }
 body>header h2
 {
   font: 14px/16px "ProFontWindowsRegular", monospace;
-  padding: 0 56px 52px;
+  padding: 0 64px 48px;
   margin: 0 0;
   display: block;
   background-color: #000;
@@ -71,14 +71,23 @@ article > header > h1
 article > p
 {
   margin: 0;
-  padding: 14px 24px 24px 24px;
+  padding: 24px;
 }
 article > p, article > header > h1
 {
   background-color: #121212;
 }
+article > code
+{
+  margin: 0;
+  border-top: 0px solid #121212;
+  border-bottom: 0px solid #121212;
+  border-left: 40px solid #121212;
+  border-right: 40px solid #121212;
+}
 code
 {
+  white-space: pre;
   background-color: black;
   color: white;
   font: 16px/16px "ProFontWindowsRegular", monospace;
