@@ -34,48 +34,47 @@ body
 }
 body>header
 {
-  padding: 32px;
+  background-color: #000;
+  border: 32px solid #222;
+  padding: 56px;
 }
 body>header h1
 {
-  font: 128px/64px "ProFontWindowsRegular", monospace;
+  font: 128px/60px "ProFontWindowsRegular", monospace;
   margin: 0;
-  padding: 64px 64px 0;
-  display: block;
-  background-color: #000;
+  margin-top: 14px;
+  padding: 0;
 }
 body>header h2
 {
-  font: 14px/16px "ProFontWindowsRegular", monospace;
-  padding: 0 64px 48px;
-  margin: 0 0;
-  display: block;
-  background-color: #000;
+  font: 14px/8px "ProFontWindowsRegular", monospace;
+  margin: 0;
+  margin-top: 4px;
+  padding: 0;
 }
 body>header, article, footer
 {
   margin: 0;
   display: block;
-  background-color: #222;
 }
 article
 {
-  padding: 16px 62px 16px;
+  border-top:    16px solid #222;
+  border-right:  64px solid #222;
+  border-left:   64px solid #222;
+  border-bottom: 16px solid #222;
+  background-color: #121212;
+  padding: 24px;
 }
 article > header > h1
 {
-  font: 36px/32px "ProFontWindowsRegular", monospace;
-  margin: 0;
-  padding: 24px 24px 0;
+  font: 36px/24px "ProFontWindowsRegular", monospace;
+  margin: 0px 0 16px;
+  padding: 0;
 }
 article > p
 {
-  margin: 0;
-  padding: 24px;
-}
-article > p, article > header > h1
-{
-  background-color: #121212;
+  margin: 8px 0 8px;
 }
 article > code
 {
@@ -97,14 +96,15 @@ code
 }
 footer
 {
-  padding: 32px;
+  background-color: #000;
+  border: 32px solid #222;;
 }
 footer > p
 {
   margin: 0;
   padding: 62px 56px 0;
   display: block;
-  background-color: #000;
+
 }
 .Comment { color: #000080; }
 .Constant { color: #a00000; }
@@ -114,6 +114,7 @@ footer > p
 .Special { color: #800080; }
 .Type { color: #008000; }
 .lnr { color: #aa5500; }
+
 
 
 
