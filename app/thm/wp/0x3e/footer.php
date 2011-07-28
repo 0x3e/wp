@@ -1,3 +1,4 @@
+<nav></nav>
 <footer>
 <p>&nbsp;</p>
 </footer><?php

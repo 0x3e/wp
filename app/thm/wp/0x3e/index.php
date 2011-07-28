@@ -9,7 +9,7 @@ while(have_posts())
   //Dev::log_print("post",$GLOBALS['post']);
   Dev::log("info","post $i");
 ?>
-<article><header><h1><?php the_title();?></h1></header><?php the_content();?>
+<article><header><time datetime="<?php the_time(get_option('date_format')); ?>" pubdate><?php the_time(get_option('date_format')); ?></time><h1><?php the_title();?></h1></header><?php the_content();?>
 </article>
 <?php
 }

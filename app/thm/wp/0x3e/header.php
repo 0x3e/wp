@@ -25,3 +25,11 @@ Dev::log("info","theme header.php");
   <h2>00111110111101000111010101001010010010100101000101001010100100011010010100010100</h2>
   </hgroup>
 </header>
+<nav>
+  <ul>
+    <li><a href="#">home</a></li>
+    <li><a href="#">blog</a></li>
+    <li><a href="#">gallery</a></li>
+    <li><a href="#">about</a></li>
+  </ul>
+</nav>

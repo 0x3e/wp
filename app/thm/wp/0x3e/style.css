@@ -32,10 +32,16 @@ body
   font-size: 16px;
   width: 896px;
 }
+a
+{
+  text-decoration: none;
+  color: white;
+}
 body>header
 {
   background-color: #000;
   border: 32px solid #222;
+  border-bottom: 16px solid #222;
   padding: 56px;
 }
 body>header h1
@@ -59,6 +65,7 @@ body>header, article, footer
 }
 article
 {
+  position: relative;
   border-top:    16px solid #222;
   border-right:  64px solid #222;
   border-left:   64px solid #222;
@@ -66,23 +73,22 @@ article
   background-color: #121212;
   padding: 24px;
 }
+article > header > time
+{
+  font: 10px/5px "ProFontWindowsRegular", monospace;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
 article > header > h1
 {
   font: 36px/24px "ProFontWindowsRegular", monospace;
-  margin: 0px 0 16px;
+  margin: 0;
   padding: 0;
 }
 article > p
 {
-  margin: 8px 0 8px;
-}
-article > code
-{
-  margin: 0;
-  border-top: 0px solid #121212;
-  border-bottom: 0px solid #121212;
-  border-left: 40px solid #121212;
-  border-right: 40px solid #121212;
+  margin: 16px 0;
 }
 code
 {
@@ -94,10 +100,31 @@ code
   padding: 0px 16px 16px;
   margin: 16px;
 }
+nav
+{
+  font: 16px/7px "ProFontWindowsRegular", monospace;
+  display: block;
+  background-color: #0A0A0A;
+  border-right: 48px solid #222;
+  border-left:  48px solid #222;
+  padding: 16px 24px;
+}
+nav ul
+{
+  margin: 0;
+  padding: 0;
+}
+nav li
+{
+
+  display: inline;
+  list-style-type: none;
+}
 footer
 {
   background-color: #000;
-  border: 32px solid #222;;
+  border: 32px solid #222;
+  border-top: 16px solid #222;
 }
 footer > p
 {
@@ -114,7 +141,6 @@ footer > p
 .Special { color: #800080; }
 .Type { color: #008000; }
 .lnr { color: #aa5500; }
-
 
 
 
