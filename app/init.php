@@ -4,6 +4,7 @@ use \App\Con\Install as Install;
 use \Dev as Dev;
 Class Init
 {
+  // added a comment via Ace on github
   public static function install()
   {
     self::base();
